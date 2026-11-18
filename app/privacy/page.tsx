@@ -1,43 +1,39 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Politique de confidentialité",
   description:
-    "How Plastex Maroc handles information sent through this website.",
-  alternates: { canonical: "/privacy/" },
+    "Comment Plastex Maroc traite les informations transmises par ce site.",
+  alternates: { canonical: "/privacy/", languages: { fr: "/privacy/", en: "/en/privacy/" } },
 };
 export default function PrivacyPage() {
   return (
     <article className="legal-page container">
       <div className="eyebrow dark">
-        <span className="eyebrow-line" /> LEGAL
+        <span className="eyebrow-line" /> MENTIONS LÉGALES
       </div>
       <h1>
-        Privacy policy<span className="period">.</span>
+        Politique de confidentialité<span className="period">.</span>
       </h1>
-      <p className="legal-date">Last updated 16 November 2026</p>
-      <h2>Information you send us</h2>
+      <p className="legal-date">Dernière mise à jour : 16 novembre 2026</p>
+      <h2>Les informations que vous nous transmettez</h2>
       <p>
-        If you contact us by email, we receive the information you choose to
-        provide, such as your name, business contact details, product
-        requirements, and message. We use it to respond to your enquiry and
-        manage related business correspondence.
+        Lorsque vous nous contactez par e-mail, nous recevons les informations que vous choisissez de fournir, comme votre nom, vos coordonnées professionnelles, vos besoins en produits et votre message. Nous les utilisons pour répondre à votre demande et gérer les échanges professionnels qui en découlent.
       </p>
-      <h2>Website operation</h2>
+      <h2>Fonctionnement du site</h2>
       <p>
-        The website itself has no account registration or contact form. Its
-        hosting provider may process standard technical data, such as IP address
-        and request logs, to deliver and secure the site.
+        Le site ne propose pas de création de compte. Son hébergeur peut traiter des données techniques habituelles, comme l’adresse IP et les journaux de requêtes, pour fournir et sécuriser le service.
       </p>
-      <h2>Sharing and retention</h2>
+      <h2>Candidatures</h2>
       <p>
-        We share enquiry information only as needed to respond and conduct our
-        business, or when required by law. We keep correspondence for as long as
-        needed for those purposes and applicable obligations.
+        Si vous postulez depuis la page Carrières, nous conservons vos coordonnées, vos réponses et votre CV dans un espace privé pour examiner votre candidature. Le site extrait le texte du CV et des mots-clés liés aux compétences pour faciliter la recherche. Ces indications ne décident pas de la sélection : chaque candidature est examinée par une personne. Contactez-nous pour toute question ou demande de suppression.
       </p>
-      <h2>Your questions</h2>
+      <h2>Partage et conservation</h2>
       <p>
-        To ask about your information or request a correction or deletion where
-        applicable, email{" "}
+        Nous utilisons les informations des demandes et candidatures uniquement pour la finalité de leur transmission, ou lorsque la loi l’exige. Les candidatures sont conservées dans un espace privé sur le serveur jusqu’à leur examen et leur suppression par notre équipe. Les échanges professionnels sont conservés aussi longtemps que nécessaire à leur finalité et aux obligations applicables.
+      </p>
+      <h2>Vos questions</h2>
+      <p>
+        Pour poser une question sur vos données ou demander leur rectification ou suppression lorsque cela s’applique, écrivez à{" "}
         <a href="mailto:commercial@plastexmaroc.com">
           commercial@plastexmaroc.com
         </a>

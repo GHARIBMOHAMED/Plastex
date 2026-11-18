@@ -1,146 +1,81 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Arrow, ContactBand, ProductGraphic } from "./components";
+import Image from "next/image";
+import { ArrowDownIcon, ArrowRightIcon, EnvelopeSimpleIcon, PhoneIcon } from "@phosphor-icons/react/ssr";
+import { Arrow } from "./components";
 import { productLinks } from "./data";
+import ProductionProof from "./production-proof";
+import CategoryShowcase from "./category-showcase";
+import RangeSelector from "./range-selector";
+import HeroVideo from "./hero-video";
+import ProcessAccordion from "./process-accordion";
+import SolarEnergy from "./solar-energy";
 
 export const metadata: Metadata = {
-  title: "Brake & Clutch Components from Tangier",
-  alternates: { canonical: "/" },
+  title: "Composants de freinage et d’embrayage de Tanger",
+  description: "Plastex Maroc fabrique des composants de freinage et d’embrayage à Tanger, utilise l’énergie solaire pour réduire ses émissions de carbone et accompagne les acheteurs professionnels en Europe, en Asie et en Afrique.",
+  alternates: { canonical: "/", languages: { fr: "/", en: "/en/" } },
 };
 
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-grid" />
-        <div className="hero-ambient" />
+      <section className="hero apc-inspired" data-enter>
+        <HeroVideo source="/videos/plastex-home-hero.mp4" />
+        <span className="hero-film-note">Images d’illustration</span>
         <div className="container hero-inner">
           <div className="hero-copy">
-            <div className="eyebrow">
-              <span className="eyebrow-line" /> ENGINEERED IN MOROCCO ·
-              CONNECTED TO THE WORLD
-            </div>
             <h1>
-              MADE TO
+              Fabricants de composants
               <br />
-              <span>MOVE</span>
-              <br />
-              FORWARD<span className="period">.</span>
+              de freinage et d’embrayage
             </h1>
-            <p>
-              Brake and clutch expertise from Tangier. Components and commercial
-              support for professional partners across Europe, Asia, and Africa.
-            </p>
-            <div className="hero-actions">
-              <Link href="/brake-discs/" className="button-primary">
-                Explore our range <Arrow diagonal />
-              </Link>
-              <Link href="/contact/" className="text-link">
-                Start a conversation <Arrow />
-              </Link>
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="hero-visual-ring" />
-            <ProductGraphic type="brake" />
-            <div className="hero-visual-caption">
-              <span>01 / 03</span>
-              <span>BRAKING COMPONENTS</span>
-            </div>
           </div>
         </div>
         <div className="hero-bottom container">
-          <span>PRECISION IN MOTION</span>
-          <span>SCROLL TO EXPLORE ↓</span>
-          <span>TANGIER, MOROCCO</span>
+          <span>Fabriqués à Tanger.<br />Pensés pour le mouvement.</span>
+          <span className="hero-scroll">DÉFILER POUR DÉCOUVRIR <ArrowDownIcon size={14} aria-hidden="true" /></span>
+          <Link href="/contact/" className="hero-contact">Une question pour notre équipe? <span><EnvelopeSimpleIcon size={22} /></span></Link>
         </div>
       </section>
       <section className="intro-section container">
-        <div className="section-topline">
-          <span className="eyebrow dark">
-            <span className="eyebrow-line" /> THE COMPANY
-          </span>
-          <span className="section-index">01 — ABOUT</span>
-        </div>
         <div className="intro-grid">
-          <h2>
-            Friction is
-            <br />
-            <em>our foundation.</em>
-          </h2>
-          <div>
-            <p className="large-copy">
-              Since 1980, Plastex Maroc has worked in friction products for
-              braking and clutch applications.
-            </p>
-            <p>
-              From our base in Tangier, we connect manufacturing knowledge with
-              the needs of professional buyers in international markets. Our
-              range brings together manufactured products and selected supplied
-              components.
-            </p>
-            <Link className="underlined-link" href="/contact/">
-              Get to know us <Arrow diagonal />
+          <div className="intro-statement">
+            <h2>
+              Nous fabriquons des composants de freinage et d’embrayage. Nous proposons aussi des tambours et des plaquettes de frein aux acheteurs professionnels.
+            </h2>
+            <Link className="button-dark" href="#products">
+              Voir nos produits <Arrow diagonal />
             </Link>
           </div>
-        </div>
-      </section>
-      <section className="range-section">
-        <div className="container">
-          <div className="section-topline">
-            <span className="eyebrow">
-              <span className="eyebrow-line" /> PRODUCT RANGE
-            </span>
-            <span className="section-index">02 — EXPLORE</span>
-          </div>
-          <div className="range-heading">
-            <h2>
-              ONE PURPOSE.
-              <br />
-              <em>EVERY COMPONENT.</em>
-            </h2>
-            <p>
-              Explore the products at the centre of our offer and find the right
-              conversation for your sourcing needs.
-            </p>
-          </div>
-          <div className="product-grid">
-            {productLinks.map((item, index) => (
-              <Link className="product-card" href={item.href} key={item.href}>
-                <div className="card-top">
-                  <span>{item.number} / 03</span>
-                  <Arrow diagonal />
-                </div>
-                <ProductGraphic
-                  type={index === 0 ? "brake" : index === 1 ? "clutch" : "drum"}
-                  small
-                />
-                <div className="card-bottom">
-                  <span>{item.description}</span>
-                  <h3>{item.label}</h3>
-                </div>
-              </Link>
-            ))}
+          <div className="intro-aside">
+            <h3>Nos composants</h3>
+            <nav aria-label="Produits Plastex Maroc">
+              {productLinks.map((item) => (
+                <Link href={item.href} key={item.href}>{item.label}</Link>
+              ))}
+            </nav>
           </div>
         </div>
       </section>
+      <CategoryShowcase />
+      <RangeSelector />
+      <ProcessAccordion />
+      <ProductionProof />
+      <SolarEnergy />
       <section className="reach-section container">
         <div className="section-topline">
-          <span className="eyebrow dark">
-            <span className="eyebrow-line" /> GLOBAL OUTLOOK
-          </span>
-          <span className="section-index">03 — REACH</span>
+          <span className="section-index">04 / PRÉSENCE</span>
         </div>
         <div className="reach-grid">
           <div>
             <h2>
-              FROM TANGIER
+              DE TANGER
               <br />
-              <em>TO EVERYWHERE.</em>
+              <em>VERS LE MONDE.</em>
             </h2>
             <p>
-              Located at the meeting point of major trade routes, Plastex Maroc
-              serves partners across Europe, Asia, and Africa.
+              À la croisée des grandes routes commerciales, Plastex Maroc accompagne des partenaires en Europe, en Asie et en Afrique.
             </p>
           </div>
           <div className="reach-graphic">
@@ -148,17 +83,44 @@ export default function Home() {
             <div className="reach-circle two" />
             <div className="reach-circle three" />
             <div className="reach-center">
-              TANGIER
+              TANGER
               <br />
               <span>35.76° N · 5.83° W</span>
             </div>
             <span className="reach-label europe">EUROPE</span>
-            <span className="reach-label asia">ASIA</span>
-            <span className="reach-label africa">AFRICA</span>
+            <span className="reach-label asia">ASIE</span>
+            <span className="reach-label africa">AFRIQUE</span>
           </div>
         </div>
       </section>
-      <ContactBand />
+      <section className="contact-photo-section" aria-labelledby="contact-photo-heading">
+        <div className="container contact-photo-frame">
+          <Image
+            src="/images/dispatch-contact.png"
+            alt="Illustration d’un opérateur sécurisant un camion devant un entrepôt"
+            fill
+            sizes="(max-width: 760px) 100vw, 85vw"
+          />
+          <div className="contact-photo-card">
+            <div className="contact-card-heading">
+              <h2 id="contact-photo-heading">Nous sommes à votre écoute.</h2>
+              <Image src="/images/plastex-logo.png" alt="" width={105} height={27} />
+            </div>
+            <p>
+              Vous recherchez des composants de freinage ou d’embrayage? Indiquez-nous l’application, les spécifications et les volumes souhaités. Notre équipe de Tanger étudiera votre demande.
+            </p>
+            <div className="contact-card-actions">
+              <div className="contact-quick-links">
+                <a href="mailto:commercial@plastexmaroc.com" aria-label="Écrire à Plastex Maroc"><EnvelopeSimpleIcon size={22} aria-hidden="true" /></a>
+                <a href="tel:+212539351136" aria-label="Appeler Plastex Maroc"><PhoneIcon size={22} aria-hidden="true" /></a>
+              </div>
+              <Link href="/contact/" className="contact-card-main-link">
+                Contacter notre équipe <span><ArrowRightIcon size={25} aria-hidden="true" /></span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

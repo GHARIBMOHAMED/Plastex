@@ -1,28 +1,34 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Header } from "./components";
+import { Footer as EnglishFooter, Header as EnglishHeader } from "./en/components";
 import { siteUrl } from "./data";
+import BrandMark from "./brand-mark";
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Plastex Maroc | Brake & Clutch Components",
+    default: "Plastex Maroc | Composants de freinage et d'embrayage",
     template: "%s | Plastex Maroc",
   },
   description:
-    "Plastex Maroc manufactures brake and clutch friction products in Tangier and supports professional buyers across Europe, Asia, and Africa.",
+    "Plastex Maroc fabrique des produits de friction pour freins et embrayages à Tanger et accompagne les acheteurs professionnels en Europe, en Asie et en Afrique.",
   applicationName: "Plastex Maroc",
-  openGraph: { type: "website", locale: "en_US", siteName: "Plastex Maroc" },
+  openGraph: { type: "website", locale: "fr_MA", siteName: "Plastex Maroc" },
   robots: { index: true, follow: true },
+  other: { "page-type": "product", "site-kind": "other" },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const locale = (await headers()).get("x-site-locale") === "en" ? "en" : "fr";
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Plastex Maroc",
+    logo: `${siteUrl}/images/plastex-logo.png`,
     url: siteUrl,
     email: "commercial@plastexmaroc.com",
     telephone: "+212539351136",
@@ -35,17 +41,26 @@ export default function RootLayout({
     },
   };
   return (
-    <html lang="en">
+    <html lang={locale} data-type="product">
       <body>
+        <div className="site-loader" aria-hidden="true">
+          <div className="loader-center">
+            <BrandMark className="loader-brand-mark" />
+            <span className="loader-caption">{locale === "en" ? "PRECISION IN MOTION" : "LA PRÉCISION EN MOUVEMENT"}</span>
+          </div>
+        </div>
+        <a className="skip-link" href="#main-content">
+          {locale === "en" ? "Skip to content" : "Aller au contenu"}
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organization).replace(/</g, "\\u003c"),
           }}
         />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {locale === "en" ? <EnglishHeader /> : <Header />}
+        <main id="main-content">{children}</main>
+        {locale === "en" ? <EnglishFooter /> : <Footer />}
       </body>
     </html>
   );

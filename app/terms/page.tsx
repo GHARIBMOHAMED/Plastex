@@ -1,46 +1,38 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Terms of Use",
-  description: "Terms governing use of the Plastex Maroc website.",
-  alternates: { canonical: "/terms/" },
+  title: "Conditions d’utilisation",
+  description: "Conditions régissant l’utilisation du site Plastex Maroc.",
+  alternates: { canonical: "/terms/", languages: { fr: "/terms/", en: "/en/terms/" } },
 };
 export default function TermsPage() {
   return (
     <article className="legal-page container">
       <div className="eyebrow dark">
-        <span className="eyebrow-line" /> LEGAL
+        <span className="eyebrow-line" /> MENTIONS LÉGALES
       </div>
       <h1>
-        Terms of use<span className="period">.</span>
+        Conditions d’utilisation<span className="period">.</span>
       </h1>
-      <p className="legal-date">Last updated 16 November 2026</p>
-      <h2>Website information</h2>
+      <p className="legal-date">Dernière mise à jour : 16 novembre 2026</p>
+      <h2>Informations du site</h2>
       <p>
-        This website presents Plastex Maroc and its products for general
-        information. Product descriptions may change. Confirm specifications,
-        availability, pricing, and suitability with our commercial team before
-        placing an order.
+        Ce site présente Plastex Maroc et ses produits à titre d’information générale. Les descriptions des produits peuvent évoluer. Confirmez les spécifications, la disponibilité, les prix et l’adéquation à votre usage auprès de notre équipe commerciale avant toute commande.
       </p>
-      <h2>Use of content</h2>
+      <h2>Utilisation du contenu</h2>
       <p>
-        Website text, graphics, and branding belong to Plastex Maroc or their
-        respective rights holders. You may view this content for your own
-        business evaluation. Reproduction or commercial reuse requires prior
-        written permission.
+        Les textes, graphismes et éléments de marque du site appartiennent à Plastex Maroc ou à leurs titulaires respectifs. Vous pouvez les consulter dans le cadre de votre évaluation professionnelle. Toute reproduction ou réutilisation commerciale nécessite une autorisation écrite préalable.
       </p>
-      <h2>Enquiries</h2>
+      <h2>Demandes</h2>
       <p>
-        Sending an enquiry does not create a purchase contract. Any supply
-        agreement depends on a separate quotation and agreed commercial terms.
+        L’envoi d’une demande ne crée pas de contrat d’achat. Tout accord d’approvisionnement repose sur un devis distinct et des conditions commerciales convenues.
       </p>
-      <h2>External links</h2>
+      <h2>Liens externes</h2>
       <p>
-        Links to external websites are provided for convenience. Their content
-        and practices are governed by their respective operators.
+        Les liens vers des sites externes sont fournis pour votre commodité. Leur contenu et leurs pratiques relèvent de leurs exploitants respectifs.
       </p>
       <h2>Contact</h2>
       <p>
-        For questions about this website, email{" "}
+        Pour toute question concernant ce site, écrivez à{" "}
         <a href="mailto:commercial@plastexmaroc.com">
           commercial@plastexmaroc.com
         </a>

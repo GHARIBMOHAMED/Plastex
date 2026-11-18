@@ -1,56 +1,59 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PlusIcon } from "@phosphor-icons/react/ssr";
 import { Arrow } from "../components";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
+  title: "Questions fréquentes",
   description:
-    "Answers to common questions about Plastex Maroc products, sourcing enquiries, and international supply.",
-  alternates: { canonical: "/faq/" },
+    "Réponses aux questions courantes sur les produits Plastex Maroc, les demandes d’approvisionnement et l’offre internationale.",
+  alternates: { canonical: "/faq/", languages: { fr: "/faq/", en: "/en/faq/" } },
 };
 const questions = [
   [
-    "What products can I enquire about?",
-    "You can contact us about brake discs, clutch discs, and brake drums. Share the vehicle application or part reference so our commercial team can review your request.",
+    "Quels produits puis-je demander?",
+    "Vous pouvez nous contacter pour des disques de frein, des disques d’embrayage, des tambours et des plaquettes de frein. Précisez l’application du véhicule ou la référence afin que notre équipe commerciale étudie votre demande.",
   ],
   [
-    "Does Plastex Maroc manufacture every product shown?",
-    "Plastex Maroc manufactures brake and clutch friction products. Brake drums are supplied through resale, with semi-finished work carried out by Plastex Maroc.",
+    "Plastex Maroc fabrique-t-elle tous les produits présentés?",
+    "Plastex Maroc fabrique des produits de friction pour freins et embrayages. Les tambours de frein sont revendus, avec des opérations de semi-finition réalisées par Plastex Maroc. Pour une référence de plaquettes précise, demandez à notre équipe les détails de fabrication ou d’approvisionnement.",
   ],
   [
-    "Can international buyers contact your team?",
-    "Yes. Plastex Maroc works with professional partners across Europe, Asia, and Africa. Contact our commercial team with your destination market and requirements.",
+    "Les acheteurs internationaux peuvent-ils vous contacter?",
+    "Oui. Plastex Maroc travaille avec des partenaires professionnels en Europe, en Asie et en Afrique. Précisez à notre équipe commerciale votre marché de destination et vos besoins.",
   ],
   [
-    "What details should I include in an enquiry?",
-    "Include the product type, vehicle or equipment application, part numbers or drawings if available, expected volume, and destination country.",
+    "Quelles informations inclure dans une demande?",
+    "Indiquez le type de produit, l’application du véhicule ou de l’équipement, les références ou plans disponibles, le volume prévu et le pays de destination.",
   ],
   [
-    "Where is Plastex Maroc located?",
-    "Plastex Maroc is based in the industrial zone on Route de Tétouan in Tangier, Morocco.",
+    "Où se trouve Plastex Maroc?",
+    "Plastex Maroc est située dans la zone industrielle de la route de Tétouan, à Tanger, au Maroc.",
   ],
 ];
 export default function FaqPage() {
   return (
     <section className="inner-page container">
       <div className="eyebrow dark">
-        <span className="eyebrow-line" /> SUPPORT
+        <span className="eyebrow-line" /> ASSISTANCE
       </div>
       <h1>
         Questions<span className="period">.</span>
         <br />
-        <em>Answered.</em>
+        <em>Réponses.</em>
       </h1>
       <div className="faq-layout">
         <p>
-          Find the information you need to begin a conversation with our team.
+          Trouvez les informations nécessaires pour échanger avec notre équipe.
         </p>
         <div className="faq-list">
           {questions.map(([q, a]) => (
             <details key={q}>
               <summary>
                 {q}
-                <span>+</span>
+                <span>
+                  <PlusIcon size={22} aria-hidden="true" />
+                </span>
               </summary>
               <p>{a}</p>
             </details>
@@ -58,9 +61,9 @@ export default function FaqPage() {
         </div>
       </div>
       <div className="faq-cta">
-        Have a different question?{" "}
+        Vous avez une autre question?{" "}
         <Link href="/contact/">
-          Contact our team <Arrow diagonal />
+          Contacter notre équipe <Arrow diagonal />
         </Link>
       </div>
     </section>

@@ -1,10 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
+import {
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+  FilmSlateIcon,
+} from "@phosphor-icons/react/ssr";
 import { productLinks } from "./data";
+import BrandMark from "./brand-mark";
+import MenuDismiss from "./menu-dismiss";
+import LanguageSwitcher from "./language-switcher";
 
 export function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
     <span aria-hidden="true" className="arrow">
-      {diagonal ? "↗" : "→"}
+      {diagonal ? <ArrowUpRightIcon size={20} /> : <ArrowRightIcon size={20} />}
     </span>
   );
 }
@@ -13,186 +22,86 @@ export function ProductGraphic({
   type = "brake",
   small = false,
 }: {
-  type?: "brake" | "clutch" | "drum";
+  type?: "brake" | "clutch" | "drum" | "pads";
   small?: boolean;
 }) {
-  const holes = Array.from({ length: type === "clutch" ? 8 : 12 }, (_, i) => i);
+  const products = {
+    brake: { file: "brake-disc-cutout.png", alt: "Illustration d’un disque de frein argenté" },
+    clutch: { file: "clutch-lining-cutout.png", alt: "Illustration d’une garniture de friction d’embrayage tissée" },
+    drum: { file: "brake-drum-cutout.png", alt: "Illustration d’un tambour de frein noir" },
+    pads: { file: "brake-pads-cutout.png", alt: "Illustration de deux plaquettes de frein" },
+  };
+  const product = products[type];
+
+  return (
+    <div className={`product-graphic ${type} ${small ? "small" : ""}`}>
+      <img
+        src={`/images/${product.file}`}
+        alt={product.alt}
+        loading={small ? "lazy" : "eager"}
+        decoding="async"
+      />
+    </div>
+  );
+}
+
+export function VideoPlaceholder({
+  poster,
+  label,
+  variant = "inline",
+}: {
+  poster: string;
+  label: string;
+  variant?: "inline" | "hero";
+}) {
   return (
     <div
-      className={`product-graphic ${type} ${small ? "small" : ""}`}
-      aria-hidden="true"
+      className={`video-placeholder ${variant}`}
+      role="img"
+      aria-label={`${label}  : emplacement vidéo avec image d’illustration`}
     >
-      <div className="graphic-glow" />
-      <svg viewBox="0 0 600 600" role="presentation">
-        <defs>
-          <radialGradient id={`metal-${type}`} cx="38%" cy="28%" r="75%">
-            <stop offset="0" stopColor="#eff3ef" />
-            <stop offset=".18" stopColor="#9fa9a8" />
-            <stop offset=".43" stopColor="#3d4749" />
-            <stop offset=".68" stopColor="#aab3b2" />
-            <stop offset=".9" stopColor="#293237" />
-            <stop offset="1" stopColor="#c8cfcb" />
-          </radialGradient>
-          <radialGradient id={`core-${type}`}>
-            <stop offset="0" stopColor="#151c1e" />
-            <stop offset=".55" stopColor="#414b4c" />
-            <stop offset="1" stopColor="#0b1114" />
-          </radialGradient>
-          <filter
-            id={`shadow-${type}`}
-            x="-30%"
-            y="-30%"
-            width="160%"
-            height="160%"
-          >
-            <feDropShadow
-              dx="16"
-              dy="26"
-              stdDeviation="22"
-              floodColor="#000"
-              floodOpacity=".58"
-            />
-          </filter>
-        </defs>
-        <g filter={`url(#shadow-${type})`}>
-          <circle
-            cx="300"
-            cy="300"
-            r={type === "drum" ? 240 : 232}
-            fill="#151c1e"
-            stroke="#a2aeaf"
-            strokeWidth="8"
-          />
-          <circle
-            cx="300"
-            cy="300"
-            r={type === "drum" ? 214 : 220}
-            fill={`url(#metal-${type})`}
-            stroke="#dae0dc"
-            strokeWidth="2"
-          />
-          {type === "drum" && (
-            <circle
-              cx="300"
-              cy="300"
-              r="175"
-              fill="#242d2f"
-              stroke="#8e999b"
-              strokeWidth="13"
-            />
-          )}
-          {type === "clutch" && (
-            <>
-              <circle
-                cx="300"
-                cy="300"
-                r="183"
-                fill="#252c2d"
-                stroke="#919e9d"
-                strokeWidth="7"
-              />
-              {holes.map((i) => (
-                <path
-                  key={i}
-                  d="M 275 92 L 325 92 L 315 178 L 285 178 Z"
-                  transform={`rotate(${i * 45} 300 300)`}
-                  fill="#c7cecb"
-                  stroke="#5c6665"
-                  strokeWidth="4"
-                />
-              ))}
-            </>
-          )}
-          {type === "brake" && (
-            <>
-              <circle
-                cx="300"
-                cy="300"
-                r="171"
-                fill="none"
-                stroke="#263032"
-                strokeWidth="12"
-              />
-              <circle
-                cx="300"
-                cy="300"
-                r="194"
-                fill="none"
-                stroke="#d8ded9"
-                strokeOpacity=".45"
-                strokeWidth="2"
-              />
-            </>
-          )}
-          {type !== "clutch" &&
-            holes.map((i) => (
-              <circle
-                key={i}
-                cx="300"
-                cy={type === "drum" ? "122" : "120"}
-                r={type === "drum" ? "9" : "11"}
-                transform={`rotate(${i * 30} 300 300)`}
-                fill="#172023"
-                stroke="#d7e1dd"
-                strokeOpacity=".75"
-                strokeWidth="2"
-              />
-            ))}
-          <circle
-            cx="300"
-            cy="300"
-            r={type === "clutch" ? 90 : 108}
-            fill={`url(#core-${type})`}
-            stroke="#b5c1bd"
-            strokeWidth="9"
-          />
-          <circle
-            cx="300"
-            cy="300"
-            r={type === "clutch" ? 49 : 62}
-            fill="#101719"
-            stroke="#a1adab"
-            strokeWidth="5"
-          />
-          {Array.from({ length: 6 }, (_, i) => (
-            <circle
-              key={i}
-              cx="300"
-              cy="225"
-              r="8"
-              transform={`rotate(${i * 60} 300 300)`}
-              fill="#0d1517"
-              stroke="#d2dcd6"
-              strokeWidth="2"
-            />
-          ))}
-          <circle
-            cx="300"
-            cy="300"
-            r="27"
-            fill="#828e8d"
-            stroke="#dce3dd"
-            strokeWidth="4"
-          />
-        </g>
-      </svg>
+      <img src={poster} alt="" decoding="async" />
+      <div className="video-placeholder-badge">
+        <FilmSlateIcon size={22} aria-hidden="true" />
+        <span>{label}</span>
+        <strong>EMPLACEMENT VIDÉO</strong>
+      </div>
     </div>
+  );
+}
+
+function MenuPanel() {
+  return (
+    <>
+      <div className="menu-panel-top">
+        <Link className="menu-panel-brand" href="/" aria-label="Accueil Plastex Maroc">
+          <Image src="/images/plastex-logo.png" alt="" width={182} height={47} />
+        </Link>
+        <div className="menu-panel-actions">
+          <Link href="/contact/">Contact</Link>
+          <Link href="/careers/">Rejoignez-nous</Link>
+        </div>
+      </div>
+      <div className="menu-panel-columns">
+        <div className="menu-panel-column"><strong>Plastex</strong><Link href="/">Accueil</Link><Link href="/our-story/">Notre histoire</Link><Link href="/careers/">Rejoignez-nous</Link><Link href="/contact/">Contact</Link></div>
+        <div className="menu-panel-column"><strong>Produits</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
+        <div className="menu-panel-column"><strong>Expertise</strong><Link href="/expertise/">Notre expertise</Link><Link href="/expertise/production/">Production</Link><Link href="/expertise/logistics/">Logistique</Link><Link href="/expertise/transport/">Transport</Link></div>
+        <div className="menu-panel-column"><strong>Qualité</strong><Link href="/faq/">Questions et réponses</Link><Link href="/contact/">Demander les certificats</Link></div>
+        <div className="menu-panel-column"><strong>Informations</strong><Link href="/privacy/">Politique de confidentialité</Link><Link href="/terms/">Conditions d’utilisation</Link></div>
+      </div>
+    </>
   );
 }
 
 export function Header() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Plastex Maroc home">
-        <span className="brand-mark">
-          <span />
-        </span>
-        <span>
-          PLASTEX<span className="brand-light"> MAROC</span>
-        </span>
+      <MenuDismiss />
+      <Link className="brand" href="/" aria-label="Accueil Plastex Maroc">
+        <Image src="/images/plastex-logo.png" alt="" width={182} height={47} priority />
       </Link>
-      <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href="/">Home</Link>
+      <nav className="desktop-nav" aria-label="Navigation principale">
+        <Link href="/">Accueil</Link>
         {productLinks.map((item) => (
           <Link key={item.href} href={item.href}>
             {item.label}
@@ -200,22 +109,19 @@ export function Header() {
         ))}
       </nav>
       <Link href="/contact/" className="header-contact">
-        Let’s talk <Arrow diagonal />
+        Parlons-en <Arrow diagonal />
       </Link>
+      <LanguageSwitcher />
+      <details className="desktop-menu">
+        <summary>Menu <span aria-hidden="true">+</span></summary>
+        <nav aria-label="Navigation développée"><MenuPanel /></nav>
+      </details>
       <details className="mobile-menu">
-        <summary aria-label="Open navigation">
+        <summary aria-label="Menu">
           <span></span>
           <span></span>
         </summary>
-        <nav aria-label="Mobile navigation">
-          <Link href="/">Home</Link>
-          {productLinks.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-          <Link href="/contact/">Contact</Link>
-        </nav>
+        <nav aria-label="Navigation mobile"><MenuPanel /></nav>
       </details>
     </header>
   );
@@ -224,49 +130,66 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-top">
-        <div>
-          <Link className="brand" href="/">
-            <span className="brand-mark">
-              <span />
-            </span>
-            <span>
-              PLASTEX<span className="brand-light"> MAROC</span>
-            </span>
-          </Link>
-          <p>
-            Friction expertise from Tangier, Morocco.
-            <br />
-            Connecting industry across continents.
-          </p>
-        </div>
-        <div>
-          <span className="footer-label">Explore</span>
-          {productLinks.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
+      <div className="footer-shell">
+        <div className="footer-left">
+          <div className="footer-identity">
+            <Link className="footer-brand" href="/" aria-label="Accueil Plastex Maroc">
+              <BrandMark className="footer-brand-mark" />
             </Link>
-          ))}
+            <span>Conçu pour<br />le mouvement.</span>
+          </div>
+          <nav className="footer-legal" aria-label="Informations légales">
+            <Link href="/privacy/">Politique de confidentialité</Link>
+            <Link href="/terms/">Conditions d’utilisation</Link>
+          </nav>
         </div>
-        <div>
-          <span className="footer-label">Company</span>
-          <Link href="/faq/">FAQ</Link>
-          <Link href="/contact/">Contact</Link>
-          <Link href="/privacy/">Privacy policy</Link>
-          <Link href="/terms/">Terms of use</Link>
+
+        <div className="footer-main">
+          <div className="footer-columns">
+            <nav className="footer-column" aria-label="Découvrir Plastex">
+              <h2>Découvrir</h2>
+              <Link href="/expertise/">Notre expertise</Link>
+              <Link href="/our-story/">Notre histoire</Link>
+              <Link href="/careers/">Rejoignez-nous</Link>
+              <Link href="/faq/">FAQ</Link>
+              <Link href="/contact/">Contact</Link>
+            </nav>
+            <nav className="footer-column" aria-label="Nos savoir-faire">
+              <h2>Savoir-faire</h2>
+              <Link href="/expertise/production/">Production</Link>
+              <Link href="/expertise/logistics/">Logistique</Link>
+              <Link href="/expertise/transport/">Transport</Link>
+            </nav>
+            <nav className="footer-column" aria-label="Nos produits">
+              <h2>Produits</h2>
+              {productLinks.map((item) => (
+                <Link key={item.href} href={item.href}>{item.label}</Link>
+              ))}
+            </nav>
+            <div className="footer-column footer-contact-details">
+              <h2>Coordonnées de l’entreprise</h2>
+              <span>Tanger, Maroc</span>
+              <a href="tel:+212539351136">+212 539 351 136</a>
+              <a href="mailto:commercial@plastexmaroc.com">commercial@plastexmaroc.com</a>
+            </div>
+            <div className="footer-column footer-reach">
+              <h2>Notre présence</h2>
+              <span>Europe</span>
+              <span>Asie</span>
+              <span>Afrique</span>
+            </div>
+          </div>
+
+          <div className="footer-main-bottom">
+            <div className="footer-copyright">
+              <span className="footer-color-dots" aria-hidden="true"><i /><i /><i /></span>
+              <span>Plastex Maroc © {new Date().getFullYear()}</span>
+            </div>
+            <Link className="footer-endmark" href="/" aria-label="Retour à l’accueil Plastex Maroc">
+              <BrandMark />
+            </Link>
+          </div>
         </div>
-        <div>
-          <span className="footer-label">Get in touch</span>
-          <a href="mailto:commercial@plastexmaroc.com">
-            commercial@plastexmaroc.com
-          </a>
-          <a href="tel:+212539351136">+212 539 351 136</a>
-          <span>Tangier, Morocco</span>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Plastex Maroc</span>
-        <span>Made for motion.</span>
       </div>
     </footer>
   );
@@ -278,19 +201,16 @@ export function ContactBand() {
       <div className="contact-orb" />
       <div className="container contact-band-inner">
         <div>
-          <div className="eyebrow">
-            <span className="eyebrow-line" /> THE NEXT MOVE
-          </div>
           <h2>
-            Let’s build what
+            Construisons ce qui
             <br />
-            <em>moves next.</em>
+            <em>nous fait avancer.</em>
           </h2>
         </div>
         <Link
           href="/contact/"
           className="circle-link"
-          aria-label="Contact Plastex Maroc"
+          aria-label="Contacter Plastex Maroc"
         >
           <Arrow diagonal />
         </Link>
