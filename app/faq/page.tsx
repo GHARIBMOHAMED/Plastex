@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Questions fréquentes",
   description:
     "Réponses aux questions courantes sur les produits Plastex Maroc, les demandes d’approvisionnement et l’offre internationale.",
-  alternates: { canonical: "/faq/", languages: { fr: "/faq/", en: "/en/faq/" } },
+  alternates: { canonical: "/faq/", languages: { fr: "/faq/", en: "/en/faq/", es: "/es/faq/" } },
 };
 const questions = [
   [

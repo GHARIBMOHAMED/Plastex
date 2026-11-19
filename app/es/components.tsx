@@ -27,10 +27,10 @@ export function ProductGraphic({
   small?: boolean;
 }) {
   const products = {
-    brake: { file: "brake-disc-cutout.png", alt: "Silver brake disc rotor illustration" },
-    clutch: { file: "clutch-lining-cutout.png", alt: "Woven clutch friction lining illustration" },
-    drum: { file: "brake-drum-cutout.png", alt: "Black brake drum illustration" },
-    pads: { file: "brake-pads-cutout.png", alt: "Pair of brake pads illustration" },
+    brake: { file: "brake-disc-cutout.png", alt: "Ilustración de un disco de freno plateado" },
+    clutch: { file: "clutch-lining-cutout.png", alt: "Ilustración de un forro de fricción de embrague tejido" },
+    drum: { file: "brake-drum-cutout.png", alt: "Ilustración de un tambor de freno negro" },
+    pads: { file: "brake-pads-cutout.png", alt: "Ilustración de dos pastillas de freno" },
   };
   const product = products[type];
 
@@ -59,13 +59,13 @@ export function VideoPlaceholder({
     <div
       className={`video-placeholder ${variant}`}
       role="img"
-      aria-label={`${label} video placeholder with illustrative image`}
+      aria-label={`${label} espacio para vídeo con imagen ilustrativa`}
     >
       <img src={poster} alt="" decoding="async" />
       <div className="video-placeholder-badge">
         <FilmSlateIcon size={22} aria-hidden="true" />
         <span>{label}</span>
-        <strong>VIDEO PLACEHOLDER</strong>
+        <strong>ESPACIO PARA VÍDEO</strong>
       </div>
     </div>
   );
@@ -75,20 +75,20 @@ function MenuPanel() {
   return (
     <>
       <div className="menu-panel-top">
-        <Link className="menu-panel-brand" href="/es/" aria-label="Plastex Maroc home">
+        <Link className="menu-panel-brand" href="/es/" aria-label="Inicio de Plastex Maroc">
           <Image src="/images/plastex-logo.png" alt="" width={182} height={47} />
         </Link>
         <div className="menu-panel-actions">
-          <Link href="/es/contact/">Contact</Link>
-          <Link href="/es/careers/">Join us</Link>
+          <Link href="/es/contact/">Contacto</Link>
+          <Link href="/es/careers/">Únete a nosotros</Link>
         </div>
       </div>
       <div className="menu-panel-columns">
-        <div className="menu-panel-column"><strong>Plastex</strong><Link href="/es/">Home</Link><Link href="/es/our-story/">Our story</Link><Link href="/es/careers/">Join us</Link><Link href="/es/contact/">Contact</Link></div>
-        <div className="menu-panel-column"><strong>Products</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
-        <div className="menu-panel-column"><strong>Expertise</strong><Link href="/es/expertise/">Our expertise</Link><Link href="/es/expertise/production/">Production</Link><Link href="/es/expertise/logistics/">Logistics</Link><Link href="/es/expertise/transport/">Transport</Link></div>
-        <div className="menu-panel-column"><strong>Quality</strong><Link href="/es/faq/">Questions and answers</Link><Link href="/es/contact/">Request certificates</Link></div>
-        <div className="menu-panel-column"><strong>Information</strong><Link href="/es/privacy/">Privacy policy</Link><Link href="/es/terms/">Terms of use</Link></div>
+        <div className="menu-panel-column"><strong>Plastex</strong><Link href="/es/">Inicio</Link><Link href="/es/our-story/">Nuestra historia</Link><Link href="/es/careers/">Únete a nosotros</Link><Link href="/es/contact/">Contacto</Link></div>
+        <div className="menu-panel-column"><strong>Productos</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<Link href="/es/catalogue/login/">Catálogo para socios</Link></div>
+        <div className="menu-panel-column"><strong>Experiencia</strong><Link href="/es/expertise/">Nuestra experiencia</Link><Link href="/es/expertise/production/">Producción</Link><Link href="/es/expertise/logistics/">Logística</Link><Link href="/es/expertise/transport/">Transporte</Link></div>
+        <div className="menu-panel-column"><strong>Calidad</strong><Link href="/es/faq/">Preguntas y respuestas</Link><Link href="/es/contact/">Solicitar certificados</Link></div>
+        <div className="menu-panel-column"><strong>Información</strong><Link href="/es/privacy/">Política de privacidad</Link><Link href="/es/terms/">Condiciones de uso</Link></div>
       </div>
     </>
   );
@@ -98,11 +98,11 @@ export function Header() {
   return (
     <header className="site-header">
       <MenuDismiss />
-      <Link className="brand" href="/es/" aria-label="Plastex Maroc home">
+      <Link className="brand" href="/es/" aria-label="Inicio de Plastex Maroc">
         <Image src="/images/plastex-logo.png" alt="" width={182} height={47} priority />
       </Link>
-      <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href="/es/">Home</Link>
+      <nav className="desktop-nav" aria-label="Navegación principal">
+        <Link href="/es/">Inicio</Link>
         {productLinks.map((item) => (
           <Link key={item.href} href={item.href}>
             {item.label}
@@ -110,18 +110,18 @@ export function Header() {
         ))}
       </nav>
       <Link href="/es/contact/" className="header-contact">
-        Let’s talk <Arrow diagonal />
+        Hablemos <Arrow diagonal />
       </Link>
       <LanguageSwitcher />
       <details className="desktop-menu">
-        <summary>Menu <span aria-hidden="true">+</span></summary>
-        <nav aria-label="Expanded navigation"><MenuPanel /></nav>
+        <summary>Menú <span aria-hidden="true">+</span></summary>
+        <nav aria-label="Navegación ampliada"><MenuPanel /></nav>
       </details>
       <details className="mobile-menu">
-        <summary aria-label="Menu">
-          Menu <PlusIcon className="mobile-menu-plus" size={22} weight="light" aria-hidden="true" />
+        <summary aria-label="Menú">
+          Menú <PlusIcon className="mobile-menu-plus" size={22} weight="light" aria-hidden="true" />
         </summary>
-        <nav aria-label="Mobile navigation"><MenuPanel /></nav>
+        <nav aria-label="Navegación móvil"><MenuPanel /></nav>
       </details>
     </header>
   );
@@ -133,50 +133,51 @@ export function Footer() {
       <div className="footer-shell">
         <div className="footer-left">
           <div className="footer-identity">
-            <Link className="footer-brand" href="/es/" aria-label="Plastex Maroc home">
+            <Link className="footer-brand" href="/es/" aria-label="Inicio de Plastex Maroc">
               <BrandMark className="footer-brand-mark" />
             </Link>
-            <span>Made for<br />motion.</span>
+            <span>Pensado para el<br />movimiento.</span>
           </div>
-          <nav className="footer-legal" aria-label="Legal information">
-            <Link href="/es/privacy/">Privacy policy</Link>
-            <Link href="/es/terms/">Terms of use</Link>
+          <nav className="footer-legal" aria-label="Información legal">
+            <Link href="/es/privacy/">Política de privacidad</Link>
+            <Link href="/es/terms/">Condiciones de uso</Link>
           </nav>
         </div>
 
         <div className="footer-main">
           <div className="footer-columns">
-            <nav className="footer-column" aria-label="Explore Plastex">
-              <h2>Explore</h2>
-              <Link href="/es/expertise/">Our expertise</Link>
-              <Link href="/es/our-story/">Our story</Link>
-              <Link href="/es/careers/">Join us</Link>
+            <nav className="footer-column" aria-label="Descubrir Plastex">
+              <h2>Descubrir</h2>
+              <Link href="/es/expertise/">Nuestra experiencia</Link>
+              <Link href="/es/our-story/">Nuestra historia</Link>
+              <Link href="/es/careers/">Únete a nosotros</Link>
               <Link href="/es/faq/">FAQ</Link>
-              <Link href="/es/contact/">Contact</Link>
+              <Link href="/es/contact/">Contacto</Link>
             </nav>
-            <nav className="footer-column" aria-label="Our capabilities">
-              <h2>Capabilities</h2>
-              <Link href="/es/expertise/production/">Production</Link>
-              <Link href="/es/expertise/logistics/">Logistics</Link>
-              <Link href="/es/expertise/transport/">Transport</Link>
+            <nav className="footer-column" aria-label="Nuestras capacidades">
+              <h2>Capacidades</h2>
+              <Link href="/es/expertise/production/">Producción</Link>
+              <Link href="/es/expertise/logistics/">Logística</Link>
+              <Link href="/es/expertise/transport/">Transporte</Link>
             </nav>
-            <nav className="footer-column" aria-label="Our products">
-              <h2>Products</h2>
+            <nav className="footer-column" aria-label="Nuestros productos">
+              <h2>Productos</h2>
               {productLinks.map((item) => (
                 <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
+              <Link href="/es/catalogue/login/">Catálogo para socios</Link>
             </nav>
             <div className="footer-column footer-contact-details">
-              <h2>Company details</h2>
-              <span>Tangier, Morocco</span>
+              <h2>Datos de la empresa</h2>
+              <span>Tánger, Marruecos</span>
               <a href="tel:+212539351136">+212 539 351 136</a>
               <a href="mailto:commercial@plastexmaroc.com">commercial@plastexmaroc.com</a>
             </div>
             <div className="footer-column footer-reach">
-              <h2>Our reach</h2>
-              <span>Europe</span>
+              <h2>Nuestra presencia</h2>
+              <span>Europa</span>
               <span>Asia</span>
-              <span>Africa</span>
+              <span>África</span>
             </div>
           </div>
 
@@ -185,7 +186,7 @@ export function Footer() {
               <span className="footer-color-dots" aria-hidden="true"><i /><i /><i /></span>
               <span>Plastex Maroc © {new Date().getFullYear()}</span>
             </div>
-            <Link className="footer-endmark" href="/es/" aria-label="Back to Plastex Maroc home">
+            <Link className="footer-endmark" href="/es/" aria-label="Volver al inicio de Plastex Maroc">
               <BrandMark />
             </Link>
           </div>
@@ -202,15 +203,15 @@ export function ContactBand() {
       <div className="container contact-band-inner">
         <div>
           <h2>
-            Let’s build what
+            Construyamos lo que
             <br />
-            <em>moves next.</em>
+            <em>nos hace avanzar.</em>
           </h2>
         </div>
         <Link
           href="/es/contact/"
           className="circle-link"
-          aria-label="Contact Plastex Maroc"
+          aria-label="Contactar con Plastex Maroc"
         >
           <Arrow diagonal />
         </Link>

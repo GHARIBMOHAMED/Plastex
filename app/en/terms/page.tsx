@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms governing use of the Plastex Maroc website.",
-  alternates: { canonical: "/en/terms/", languages: { fr: "/terms/", en: "/en/terms/" } },
+  alternates: { canonical: "/en/terms/", languages: { fr: "/terms/", en: "/en/terms/", es: "/es/terms/" } },
 };
 export default function TermsPage() {
   return (

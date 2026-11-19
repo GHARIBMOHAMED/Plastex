@@ -15,7 +15,7 @@ import ScrollFillHeadline from "./scroll-fill-headline";
 export const metadata: Metadata = {
   title: "Brake & Clutch Components from Tangier",
   description: "Plastex Maroc makes brake and clutch components in Tangier, uses solar energy to help reduce carbon emissions, and serves professional buyers across Europe, Asia, and Africa.",
-  alternates: { canonical: "/en/", languages: { fr: "/", en: "/en/" } },
+  alternates: { canonical: "/en/", languages: { fr: "/", en: "/en/", es: "/es/" } },
 };
 
 export default function Home() {

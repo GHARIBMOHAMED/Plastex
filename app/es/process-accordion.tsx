@@ -12,18 +12,18 @@ import {
 
 const topics = [
   {
-    title: "Production",
-    copy: "We make brake and clutch components in Tangier. We also carry out semi-finished work on the brake drums we supply.",
+    title: "Producción",
+    copy: "Fabricamos componentes de freno y embrague en Tánger. También realizamos trabajos de semiacabado en los tambores de freno que suministramos.",
     icon: FactoryIcon,
   },
   {
-    title: "Quality",
-    copy: "Tell us the application and specifications you need. Our team can discuss the details and share information about TÜV and AFNOR certifications on request.",
+    title: "Calidad",
+    copy: "Indícanos la aplicación y las especificaciones que necesitas. Nuestro equipo puede revisar los detalles y proporcionar información sobre las certificaciones TÜV y AFNOR bajo petición.",
     icon: ShieldCheckIcon,
   },
   {
-    title: "International supply",
-    copy: "From Tangier, we support professional buyers in Europe, Asia, and Africa with clear, application-led sourcing conversations.",
+    title: "Suministro internacional",
+    copy: "Desde Tánger, acompañamos a compradores profesionales de Europa, Asia y África con consultas de suministro claras y basadas en la aplicación.",
     icon: GlobeHemisphereWestIcon,
   },
 ] as const;
@@ -42,7 +42,7 @@ export default function ProcessAccordion() {
   };
 
   return (
-    <section className="process-section" aria-label="How Plastex Maroc works">
+    <section className="process-section" aria-label="Cómo trabaja Plastex Maroc">
       <div className="container process-layout">
         <div className="process-visual" aria-hidden="true">
           <div className="process-icon" key={visualIndex}>
@@ -69,12 +69,12 @@ export default function ProcessAccordion() {
             })}
           </div>
           <div className="process-footer">
-            <p>From application to enquiry, we help you clarify the component and information you need.</p>
+            <p>Desde la aplicación hasta la consulta, te ayudamos a definir el componente y la información necesaria.</p>
             <div>
-              <h3>Start a conversation</h3>
-              <Link href="/es/expertise/">Explore our expertise</Link>
-              <Link href="/es/contact/">Contact our team</Link>
-              <Link href="/es/faq/">Frequently asked questions</Link>
+              <h3>Iniciar una conversación</h3>
+              <Link href="/es/expertise/">Descubrir nuestra experiencia</Link>
+              <Link href="/es/contact/">Contactar con nuestro equipo</Link>
+              <Link href="/es/faq/">Preguntas frecuentes</Link>
             </div>
           </div>
         </div>

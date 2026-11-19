@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const annualDiscs = 6_000_000;
-const numberFormat = new Intl.NumberFormat("en-US");
+const numberFormat = new Intl.NumberFormat("es-ES");
 
 export default function ProductionProof() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -49,27 +49,27 @@ export default function ProductionProof() {
       <div className="container">
         <div className="proof-topline">
           <span>PLASTEX MAROC / PRODUCTION</span>
-          <span>BUILT IN TANGIER</span>
+          <span>FABRICADO EN TÁNGER</span>
         </div>
         <div className="proof-number-row">
           <strong className="proof-number" aria-hidden="true">
             {numberFormat.format(count)}
           </strong>
-          <h2 id="proof-heading"><span className="visually-hidden">6,000,000 </span>Discs produced each year</h2>
+          <h2 id="proof-heading"><span className="visually-hidden">6,000,000 </span>Discos producidos al año</h2>
         </div>
         <div className="proof-certifications">
           <div className="proof-cert-intro">
-            <span>QUALITY ASSURANCE</span>
-            <h3>Certifications</h3>
-            <p>Certificate details and scope are available from our team on request.</p>
+            <span>GARANTÍA DE CALIDAD</span>
+            <h3>Certificaciones</h3>
+            <p>Los detalles y el alcance de los certificados están disponibles a través de nuestro equipo bajo petición.</p>
           </div>
           <div className="proof-cert-grid">
             <div className="proof-cert-card">
-              <span>01 / CERTIFICATION</span>
+              <span>01 / CERTIFICACIÓN</span>
               <strong>TÜV</strong>
             </div>
             <div className="proof-cert-card">
-              <span>02 / CERTIFICATION</span>
+              <span>02 / CERTIFICACIÓN</span>
               <strong>AFNOR</strong>
             </div>
           </div>

@@ -85,7 +85,7 @@ function MenuPanel() {
       </div>
       <div className="menu-panel-columns">
         <div className="menu-panel-column"><strong>Plastex</strong><Link href="/">Accueil</Link><Link href="/our-story/">Notre histoire</Link><Link href="/careers/">Rejoignez-nous</Link><Link href="/contact/">Contact</Link></div>
-        <div className="menu-panel-column"><strong>Produits</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
+        <div className="menu-panel-column"><strong>Produits</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<Link href="/catalogue/login/">Catalogue partenaires</Link></div>
         <div className="menu-panel-column"><strong>Expertise</strong><Link href="/expertise/">Notre expertise</Link><Link href="/expertise/production/">Production</Link><Link href="/expertise/logistics/">Logistique</Link><Link href="/expertise/transport/">Transport</Link></div>
         <div className="menu-panel-column"><strong>Qualité</strong><Link href="/faq/">Questions et réponses</Link><Link href="/contact/">Demander les certificats</Link></div>
         <div className="menu-panel-column"><strong>Informations</strong><Link href="/privacy/">Politique de confidentialité</Link><Link href="/terms/">Conditions d’utilisation</Link></div>
@@ -165,6 +165,7 @@ export function Footer() {
               {productLinks.map((item) => (
                 <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
+              <Link href="/catalogue/login/">Catalogue partenaires</Link>
             </nav>
             <div className="footer-column footer-contact-details">
               <h2>Coordonnées de l’entreprise</h2>

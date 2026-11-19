@@ -1,51 +1,27 @@
 import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Terms of Use",
-  description: "Terms governing use of the Plastex Maroc website.",
-  alternates: { canonical: "/es/terms/", languages: { fr: "/terms/", en: "/es/terms/" } },
+  title: "Condiciones de uso",
+  description: "Condiciones de uso del sitio web de Plastex Maroc.",
+  alternates: { canonical: "/es/terms/", languages: { fr: "/terms/", en: "/en/terms/", es: "/es/terms/" } },
 };
+
 export default function TermsPage() {
   return (
     <article className="legal-page container">
-      <div className="eyebrow dark">
-        <span className="eyebrow-line" /> LEGAL
-      </div>
-      <h1>
-        Terms of use<span className="period">.</span>
-      </h1>
-      <p className="legal-date">Last updated 16 November 2026</p>
-      <h2>Website information</h2>
-      <p>
-        This website presents Plastex Maroc and its products for general
-        information. Product descriptions may change. Confirm specifications,
-        availability, pricing, and suitability with our commercial team before
-        placing an order.
-      </p>
-      <h2>Use of content</h2>
-      <p>
-        Website text, graphics, and branding belong to Plastex Maroc or their
-        respective rights holders. You may view this content for your own
-        business evaluation. Reproduction or commercial reuse requires prior
-        written permission.
-      </p>
-      <h2>Enquiries</h2>
-      <p>
-        Sending an enquiry does not create a purchase contract. Any supply
-        agreement depends on a separate quotation and agreed commercial terms.
-      </p>
-      <h2>External links</h2>
-      <p>
-        Links to external websites are provided for convenience. Their content
-        and practices are governed by their respective operators.
-      </p>
-      <h2>Contact</h2>
-      <p>
-        For questions about this website, email{" "}
-        <a href="mailto:commercial@plastexmaroc.com">
-          commercial@plastexmaroc.com
-        </a>
-        .
-      </p>
+      <div className="eyebrow dark"><span className="eyebrow-line" /> INFORMACIÓN LEGAL</div>
+      <h1>Condiciones de uso<span className="period">.</span></h1>
+      <p className="legal-date">Última actualización: 16 de noviembre de 2026</p>
+      <h2>Información del sitio web</h2>
+      <p>Este sitio web presenta a Plastex Maroc y sus productos con fines informativos. Las descripciones de los productos pueden cambiar. Confirme con nuestro equipo comercial las especificaciones, disponibilidad, precios e idoneidad antes de realizar un pedido.</p>
+      <h2>Uso del contenido</h2>
+      <p>Los textos, gráficos y elementos de marca del sitio web pertenecen a Plastex Maroc o a sus respectivos titulares. Puede consultar este contenido para evaluar una posible relación comercial. Su reproducción o reutilización comercial requiere autorización previa por escrito.</p>
+      <h2>Consultas</h2>
+      <p>El envío de una consulta no constituye un contrato de compraventa. Cualquier acuerdo de suministro depende de una oferta independiente y de condiciones comerciales pactadas.</p>
+      <h2>Enlaces externos</h2>
+      <p>Los enlaces a sitios web externos se ofrecen por comodidad. Sus contenidos y prácticas son responsabilidad de sus respectivos operadores.</p>
+      <h2>Contacto</h2>
+      <p>Si tiene preguntas sobre este sitio web, escriba a <a href="mailto:commercial@plastexmaroc.com">commercial@plastexmaroc.com</a>.</p>
     </article>
   );
 }

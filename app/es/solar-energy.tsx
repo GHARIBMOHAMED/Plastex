@@ -7,23 +7,23 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 const steps = [
   {
     number: "01",
-    title: "Sunlight becomes energy",
-    copy: "Solar energy is part of the way we power our work in Tangier.",
-    description: "Illustration of solar panels on an industrial roof under the sun",
+    title: "La luz solar se convierte en energía",
+    copy: "La energía solar contribuye a alimentar nuestras actividades en Tánger.",
+    description: "Ilustración de paneles solares en un tejado industrial bajo el sol",
     image: "/images/solar-rooftop.webp",
   },
   {
     number: "02",
-    title: "Energy for our work",
-    copy: "We use that energy in our operations as we make brake and clutch components.",
-    description: "Illustration of rooftop solar panels and the electricity grid",
+    title: "Energía para nuestro trabajo",
+    copy: "Utilizamos esa energía en nuestras operaciones de fabricación de componentes de freno y embrague.",
+    description: "Ilustración de paneles solares en un tejado y de la red eléctrica",
     image: "/images/solar-grid.webp",
   },
   {
     number: "03",
-    title: "A lower carbon impact",
-    copy: "Using solar energy helps us reduce carbon emissions from our operations.",
-    description: "Illustration of a solar roof and a downward CO₂ arrow",
+    title: "Menor impacto de carbono",
+    copy: "El uso de energía solar nos ayuda a reducir las emisiones de carbono de nuestras actividades.",
+    description: "Ilustración de un tejado solar y una flecha descendente junto al CO₂",
     image: "/images/solar-carbon.webp",
   },
 ] as const;
@@ -37,18 +37,18 @@ export default function SolarEnergy() {
     <section className="solar-story" id="solar-energy" aria-labelledby="solar-story-title">
       <div className="solar-story-inner">
         <div className="solar-story-aside">
-          <span className="solar-story-index">03 / ENERGY</span>
+          <span className="solar-story-index">03 / ENERGÍA</span>
           <div>
-            <h2 id="solar-story-title">Power from the sun.<br />Made for motion.</h2>
-            <p>We use solar energy to help reduce carbon emissions from our operations in Tangier.</p>
+            <h2 id="solar-story-title">Energía del sol.<br />Al servicio del movimiento.</h2>
+            <p>Utilizamos energía solar para contribuir a reducir las emisiones de carbono de nuestras actividades en Tánger.</p>
           </div>
         </div>
         <div className="solar-story-content">
           <div className="solar-story-topline">
-            <span>OUR ENERGY APPROACH</span>
+            <span>NUESTRO ENFOQUE ENERGÉTICO</span>
             <span>01 — 03</span>
           </div>
-          <div className="solar-story-panels" aria-label="Solar energy steps">
+          <div className="solar-story-panels" aria-label="Etapas de la energía solar">
             {visible.map((step, index) => {
               const stepIndex = firstVisible + index;
               return (
@@ -58,7 +58,7 @@ export default function SolarEnergy() {
                   type="button"
                   onClick={() => setSelected(stepIndex)}
                   aria-pressed={selected === stepIndex}
-                  aria-label={`Show step ${step.number}: ${step.title}`}
+                  aria-label={`Mostrar etapa ${step.number}: ${step.title}`}
                 >
                   <span className="solar-story-number" aria-hidden="true">{step.number}</span>
                   <Image className="solar-diagram solar-illustration" src={step.image} alt={step.description} width={1200} height={800} sizes="(max-width: 600px) 100vw, 43vw" />
@@ -73,8 +73,8 @@ export default function SolarEnergy() {
                 <p>{steps[selected].copy}</p>
               </div>
               <div className="solar-story-controls">
-                <button type="button" aria-label="Previous energy step" disabled={selected === 0} onClick={() => setSelected(selected - 1)}><ArrowLeftIcon size={25} aria-hidden="true" /></button>
-                <button type="button" aria-label="Next energy step" disabled={selected === steps.length - 1} onClick={() => setSelected(selected + 1)}><ArrowRightIcon size={25} aria-hidden="true" /></button>
+                <button type="button" aria-label="Etapa anterior" disabled={selected === 0} onClick={() => setSelected(selected - 1)}><ArrowLeftIcon size={25} aria-hidden="true" /></button>
+                <button type="button" aria-label="Etapa siguiente" disabled={selected === steps.length - 1} onClick={() => setSelected(selected + 1)}><ArrowRightIcon size={25} aria-hidden="true" /></button>
               </div>
             </div>
             <div className="solar-story-bottom-space" aria-hidden="true" />

@@ -13,74 +13,74 @@ type Slug = keyof typeof products;
 const productContent: Record<Slug, { image: string; alt: string; introduction: string; supporting: string; note: string }> = {
   "brake-discs": {
     image: "/images/brake-disc-cutout.png",
-    alt: "Silver brake disc rotor product illustration",
-    introduction: "A brake disc enquiry starts with the application, dimensions, and supply requirements.",
-    supporting: "We make braking components in Tangier and work with professional buyers on specification-led conversations. Share your reference or drawing and the volumes you need.",
-    note: "Brake disc manufacturing and supply start with a clear technical brief.",
+    alt: "Ilustración de un disco de freno plateado",
+    introduction: "Una consulta sobre discos de freno comienza por la aplicación, las dimensiones y los requisitos de suministro.",
+    supporting: "Fabricamos componentes de frenado en Tánger y trabajamos con compradores profesionales a partir de especificaciones técnicas. Comparta su referencia o plano y los volúmenes necesarios.",
+    note: "La fabricación y el suministro de discos de freno empiezan con una definición técnica clara.",
   },
   "clutch-discs": {
     image: "/images/clutch-lining-cutout.png",
-    alt: "Woven annular clutch friction lining product illustration",
-    introduction: "Friction products for clutch applications, made and assembled in Tangier.",
-    supporting: "Plastex Maroc manufactures clutch friction products and assembles clutch discs. Tell us the application, part reference, and destination market to begin a focused enquiry.",
-    note: "The right conversation begins with your clutch application.",
+    alt: "Ilustración de un revestimiento anular de fricción para embrague",
+    introduction: "Productos de fricción para embragues, fabricados y ensamblados en Tánger.",
+    supporting: "Plastex Maroc fabrica productos de fricción para embragues y ensambla discos de embrague. Indíquenos la aplicación, la referencia y el mercado de destino para iniciar una consulta concreta.",
+    note: "La conversación adecuada comienza por la aplicación del embrague.",
   },
   "brake-drums": {
     image: "/images/brake-drum-cutout.png",
-    alt: "Black brake drum with silver face product illustration",
-    introduction: "Brake drums are part of our offer, with semi-finished work carried out in Tangier.",
-    supporting: "Plastex Maroc resells brake drums and carries out semi-finished work. Share the application and technical requirements so our team can review the right supply route.",
-    note: "Brake drum sourcing is guided by the part and market you need.",
+    alt: "Ilustración de un tambor de freno negro con cara plateada",
+    introduction: "Los tambores de freno forman parte de nuestra oferta, con trabajos de semiacabado realizados en Tánger.",
+    supporting: "Plastex Maroc revende tambores de freno y realiza trabajos de semiacabado. Comparta la aplicación y los requisitos técnicos para que nuestro equipo estudie la vía de suministro adecuada.",
+    note: "El suministro de tambores de freno se define según la pieza y el mercado necesarios.",
   },
   "brake-pads": {
     image: "/images/brake-pads-cutout.png",
-    alt: "Pair of brake pads product illustration",
-    introduction: "A brake pad enquiry begins with a clear part reference and application.",
-    supporting: "Share the part reference, expected quantity, and destination market with our team in Tangier. We can review your request and discuss the available supply route.",
-    note: "The right brake pad enquiry starts with the part you need.",
+    alt: "Ilustración de un par de pastillas de freno",
+    introduction: "Una consulta sobre pastillas de freno comienza por una referencia y una aplicación claras.",
+    supporting: "Comparta la referencia, la cantidad prevista y el mercado de destino con nuestro equipo de Tánger. Podremos revisar su solicitud y hablar de las opciones de suministro.",
+    note: "Una consulta útil sobre pastillas de freno comienza por la pieza que necesita.",
   },
 };
 
 const galleryContent: Record<Slug, { title: string; copy: string; images: ProductGalleryImage[]; statement: string }> = {
   "brake-discs": {
-    title: "Brake discs, seen up close.",
-    copy: "Start with the component, then discuss the application and dimensions. The workshop views are illustrative; share your reference or drawing for a specific enquiry.",
+    title: "Discos de freno, de cerca.",
+    copy: "Empiece por el componente y después concrete la aplicación y las dimensiones. Las imágenes del taller son ilustrativas; comparta su referencia o plano para una consulta específica.",
     images: [
-      { src: "/images/brake-disc-cutout.png", alt: "Illustrative silver brake disc rotor", kind: "cutout" },
-      { src: "/images/brake-scene.webp", alt: "Illustrative brake discs in a workshop", kind: "scene" },
-      { src: "/images/brake-film.webp", alt: "Illustrative brake disc machining view", kind: "scene" },
+      { src: "/images/brake-disc-cutout.png", alt: "Disco de freno plateado ilustrativo", kind: "cutout" },
+      { src: "/images/brake-scene.webp", alt: "Discos de freno ilustrativos en un taller", kind: "scene" },
+      { src: "/images/brake-film.webp", alt: "Vista ilustrativa del mecanizado de un disco de freno", kind: "scene" },
     ],
-    statement: "A clear application, the right reference, and a realistic supply plan make every brake disc conversation stronger.",
+    statement: "Una aplicación clara, la referencia correcta y un plan de suministro realista mejoran toda conversación sobre discos de freno.",
   },
   "clutch-discs": {
-    title: "Friction at the centre.",
-    copy: "See a clutch friction lining alongside illustrative workshop scenes. Tell us about the assembled disc and application you need.",
+    title: "La fricción en el centro.",
+    copy: "Vea un revestimiento de fricción para embrague junto a escenas ilustrativas del taller. Háblenos del disco ensamblado y de la aplicación que necesita.",
     images: [
-      { src: "/images/clutch-lining-cutout.png", alt: "Illustrative woven annular clutch friction lining", kind: "cutout" },
-      { src: "/images/clutch-scene.webp", alt: "Illustrative clutch component in a workshop", kind: "scene" },
-      { src: "/images/workshop-contact.webp", alt: "Illustrative automotive component workshop", kind: "scene" },
+      { src: "/images/clutch-lining-cutout.png", alt: "Revestimiento anular de fricción para embrague ilustrativo", kind: "cutout" },
+      { src: "/images/clutch-scene.webp", alt: "Componente de embrague ilustrativo en un taller", kind: "scene" },
+      { src: "/images/workshop-contact.webp", alt: "Taller ilustrativo de componentes de automoción", kind: "scene" },
     ],
-    statement: "Friction expertise and assembly come together when the clutch application is understood from the start.",
+    statement: "La experiencia en fricción y el ensamblaje se combinan cuando se conoce la aplicación del embrague desde el principio.",
   },
   "brake-drums": {
-    title: "A wider braking offer.",
-    copy: "View a brake drum illustration and illustrative production context. Plastex Maroc resells brake drums and carries out semi-finished work.",
+    title: "Una oferta de frenado más amplia.",
+    copy: "Vea una ilustración de un tambor de freno y un contexto de producción ilustrativo. Plastex Maroc revende tambores de freno y realiza trabajos de semiacabado.",
     images: [
-      { src: "/images/brake-drum-cutout.png", alt: "Illustrative black brake drum with silver face", kind: "cutout" },
-      { src: "/images/drum-scene.webp", alt: "Illustrative brake drum in a workshop", kind: "scene" },
-      { src: "/images/factory-film.webp", alt: "Illustrative automotive component workshop", kind: "scene" },
+      { src: "/images/brake-drum-cutout.png", alt: "Tambor de freno negro con cara plateada ilustrativo", kind: "cutout" },
+      { src: "/images/drum-scene.webp", alt: "Tambor de freno ilustrativo en un taller", kind: "scene" },
+      { src: "/images/factory-film.webp", alt: "Taller ilustrativo de componentes de automoción", kind: "scene" },
     ],
-    statement: "Semi-finished work and thoughtful sourcing bring brake drums into a broader braking offer.",
+    statement: "El semiacabado y una selección cuidadosa integran los tambores de freno en una oferta de frenado más amplia.",
   },
   "brake-pads": {
-    title: "Brake pads in focus.",
-    copy: "Begin with the pad reference, quantity, and destination. The supporting workshop and dispatch views are illustrative.",
+    title: "Pastillas de freno, en detalle.",
+    copy: "Empiece por la referencia de la pastilla, la cantidad y el destino. Las imágenes del taller y del envío son ilustrativas.",
     images: [
-      { src: "/images/brake-pads-cutout.png", alt: "Illustrative pair of brake pads", kind: "cutout" },
-      { src: "/images/workshop-contact.webp", alt: "Illustrative automotive component workshop", kind: "scene" },
-      { src: "/images/dispatch-contact.png", alt: "Illustrative cargo dispatch scene", kind: "scene" },
+      { src: "/images/brake-pads-cutout.png", alt: "Par de pastillas de freno ilustrativo", kind: "cutout" },
+      { src: "/images/workshop-contact.webp", alt: "Taller ilustrativo de componentes de automoción", kind: "scene" },
+      { src: "/images/dispatch-contact.png", alt: "Escena ilustrativa de expedición de mercancías", kind: "scene" },
     ],
-    statement: "Every brake pad enquiry starts with the part reference, the application, and the market it needs to reach.",
+    statement: "Cada consulta sobre pastillas de freno empieza por la referencia, la aplicación y el mercado de destino.",
   },
 };
 
@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: product.seo },
     description: product.description,
-    alternates: { canonical: `/es/${slug}/`, languages: { fr: `/${slug}/`, en: `/es/${slug}/` } },
+    alternates: { canonical: `/es/${slug}/`, languages: { fr: `/${slug}/`, en: `/en/${slug}/`, es: `/es/${slug}/` } },
     openGraph: { locale: "es_ES", title: product.seo, description: product.description },
   };
 }
@@ -104,16 +104,16 @@ function ProductContactScene({ name }: { name: string }) {
   return (
     <section className="reference-contact-scene" aria-labelledby="reference-contact-heading">
       <div className="container reference-contact-frame">
-        <Image src="/images/dispatch-contact.png" alt="Illustrative dispatch worker securing a cargo truck" fill sizes="85vw" />
+        <Image src="/images/dispatch-contact.png" alt="Trabajador ilustrativo asegurando la carga de un camión" fill sizes="85vw" />
         <div className="reference-contact-card">
-          <h2 id="reference-contact-heading">Let’s talk about {name.toLowerCase()}.</h2>
-          <p>Have a part reference, drawing, or volume in mind? Our team in Tangier can help you take the next step.</p>
+          <h2 id="reference-contact-heading">Hablemos de {name.toLowerCase()}.</h2>
+          <p>¿Tiene una referencia, un plano o un volumen previsto? Nuestro equipo de Tánger le ayudará a dar el siguiente paso.</p>
           <div className="reference-contact-actions">
             <div>
-              <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
-              <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
+              <a href="mailto:commercial@plastexmaroc.com" aria-label="Enviar correo a Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
+              <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
             </div>
-            <Link href="/es/contact/">Contact our team <span><ArrowRightIcon size={23} aria-hidden="true" /></span></Link>
+            <Link href="/es/contact/">Contacte con nuestro equipo <span><ArrowRightIcon size={23} aria-hidden="true" /></span></Link>
           </div>
         </div>
       </div>
@@ -137,28 +137,28 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <h1 id="product-page-title">{first}<br />{rest.join(" ")}</h1>
           <p className="reference-product-tagline">{product.headline}</p>
           <div className="reference-hero-contact">
-            <span>Ask us about {product.name.toLowerCase()}</span>
-            <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
-            <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
+            <span>Consúltenos sobre {product.name.toLowerCase()}</span>
+            <a href="mailto:commercial@plastexmaroc.com" aria-label="Enviar correo a Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
+            <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
           </div>
         </div>
-        <span className="reference-film-note">Illustrative product image</span>
+        <span className="reference-film-note">Imagen de producto ilustrativa</span>
       </section>
 
       <section className="reference-product-intro" aria-labelledby="product-intro-heading">
         <div className="container reference-product-intro-grid">
           <div className="reference-product-aside">
-            <span>More about Plastex?</span>
-            <nav aria-label="Learn about Plastex Maroc">
-              <Link href="/es/our-story/">Our story</Link>
-              <Link href="/es/expertise/">Our expertise</Link>
-              <Link href="/es/faq/">Frequently asked questions</Link>
+            <span>¿Quiere saber más sobre Plastex?</span>
+            <nav aria-label="Conozca Plastex Maroc">
+              <Link href="/es/our-story/">Nuestra historia</Link>
+              <Link href="/es/expertise/">Nuestra experiencia</Link>
+              <Link href="/es/faq/">Preguntas frecuentes</Link>
             </nav>
           </div>
           <div className="reference-product-statement">
             <h2 id="product-intro-heading">{content.introduction}</h2>
             <p>{content.supporting}</p>
-            <Link href="/es/contact/" className="reference-product-button">Discuss your requirements <Arrow /></Link>
+            <Link href="/es/contact/" className="reference-product-button">Hablemos de sus necesidades <Arrow /></Link>
           </div>
         </div>
       </section>
@@ -171,11 +171,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div className="container product-story-statement-grid">
           <ScrollFillHeadline id="product-story-statement-heading" text={gallery.statement} />
           <aside>
-            <h3>Explore our expertise</h3>
-            <nav aria-label="Explore Plastex expertise">
-              <Link href="/es/expertise/production/">Production</Link>
-              <Link href="/es/expertise/logistics/">Logistics</Link>
-              <Link href="/es/expertise/transport/">Transport</Link>
+            <h3>Explore nuestra experiencia</h3>
+            <nav aria-label="Explore la experiencia de Plastex">
+              <Link href="/es/expertise/production/">Producción</Link>
+              <Link href="/es/expertise/logistics/">Logística</Link>
+              <Link href="/es/expertise/transport/">Transporte</Link>
             </nav>
           </aside>
         </div>
@@ -183,7 +183,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <section className="reference-product-proof" aria-labelledby="reference-product-proof-heading">
         <div className="container reference-product-proof-grid">
-          <div><span>Quality conversations</span><p>TÜV and AFNOR certificate details and scope are available from our team on request.</p><Link href="/es/contact/">Ask for documentation <Arrow /></Link></div>
+          <div><span>Diálogo sobre calidad</span><p>Nuestro equipo puede facilitar los detalles y el alcance de los certificados TÜV y AFNOR bajo petición.</p><Link href="/es/contact/">Solicitar documentación <Arrow /></Link></div>
           <h2 id="reference-product-proof-heading">{content.note}</h2>
         </div>
       </section>

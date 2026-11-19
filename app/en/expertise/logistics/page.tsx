@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Logistics",
   description:
     "Plan a clear brake and clutch component supply enquiry with Plastex Maroc in Tangier. Discuss products, volumes, destination markets, and timing.",
-  alternates: { canonical: "/en/expertise/logistics/", languages: { fr: "/expertise/logistics/", en: "/en/expertise/logistics/" } },
+  alternates: { canonical: "/en/expertise/logistics/", languages: { fr: "/expertise/logistics/", en: "/en/expertise/logistics/", es: "/es/expertise/logistics/" } },
   openGraph: { locale: "en_US",
     title: "Logistics | Plastex Maroc",
     description:

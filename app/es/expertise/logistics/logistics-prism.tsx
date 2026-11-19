@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 
-export default function LogisticsPrism({ ariaLabel = "Rotate the logistics sculpture. Move your pointer, drag, or use arrow keys.", subtle = false }: { ariaLabel?: string; subtle?: boolean }) {
+export default function LogisticsPrism({ ariaLabel = "Gire la escultura logística. Mueva el puntero, arrastre o use las flechas del teclado.", subtle = false }: { ariaLabel?: string; subtle?: boolean }) {
   const geometryRef = useRef<HTMLSpanElement>(null);
   const angles = useRef({ x: 0, y: 0 });
 

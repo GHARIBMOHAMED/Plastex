@@ -15,7 +15,7 @@ import ScrollFillHeadline from "./scroll-fill-headline";
 export const metadata: Metadata = {
   title: "Composants de freinage et d’embrayage de Tanger",
   description: "Plastex Maroc fabrique des composants de freinage et d’embrayage à Tanger, utilise l’énergie solaire pour réduire ses émissions de carbone et accompagne les acheteurs professionnels en Europe, en Asie et en Afrique.",
-  alternates: { canonical: "/", languages: { fr: "/", en: "/en/" } },
+  alternates: { canonical: "/", languages: { fr: "/", en: "/en/", es: "/es/" } },
 };
 
 export default function Home() {

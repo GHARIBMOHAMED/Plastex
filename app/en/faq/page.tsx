@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
     "Answers to common questions about Plastex Maroc products, sourcing enquiries, and international supply.",
-  alternates: { canonical: "/en/faq/", languages: { fr: "/faq/", en: "/en/faq/" } },
+  alternates: { canonical: "/en/faq/", languages: { fr: "/faq/", en: "/en/faq/", es: "/es/faq/" } },
 };
 const questions = [
   [

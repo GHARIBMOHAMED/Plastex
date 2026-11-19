@@ -6,28 +6,28 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 const steps = [
   {
-    title: "Define the requirement",
-    copy: "Share an application, part reference, drawing, and expected volume. These details give the production discussion a clear starting point.",
+    title: "Definir la necesidad",
+    copy: "Comparta la aplicación, la referencia, un plano y el volumen previsto. Estos datos ofrecen un punto de partida claro para hablar de producción.",
     image: "/images/brake-scene.webp",
-    alt: "Illustrative close-up of a brake disc",
+    alt: "Primer plano ilustrativo de un disco de freno",
   },
   {
-    title: "Make friction products",
-    copy: "Our Tangier operation manufactures brake and clutch friction products for professional component supply.",
+    title: "Fabricar productos de fricción",
+    copy: "Nuestra planta de Tánger fabrica productos de fricción para frenos y embragues destinados al suministro profesional.",
     image: "/images/factory-film.webp",
-    alt: "Illustrative industrial scene with brake and clutch components",
+    alt: "Escena industrial ilustrativa con componentes de freno y embrague",
   },
   {
-    title: "Assemble clutch discs",
-    copy: "Clutch disc assembly brings the friction product into the component range buyers can discuss with our team.",
+    title: "Ensamblar discos de embrague",
+    copy: "El ensamblaje de discos de embrague incorpora el producto de fricción a la gama que los compradores pueden consultar con nuestro equipo.",
     image: "/images/clutch-scene.webp",
-    alt: "Illustrative clutch disc assembly",
+    alt: "Disco de embrague ensamblado ilustrativo",
   },
   {
-    title: "Semi-finish brake drums",
-    copy: "Alongside our manufactured products, we resell brake drums and carry out semi-finished work in Tangier.",
+    title: "Semiacabar tambores de freno",
+    copy: "Además de nuestros productos fabricados, revendemos tambores de freno y realizamos trabajos de semiacabado en Tánger.",
     image: "/images/drum-scene.webp",
-    alt: "Illustrative brake drum close-up",
+    alt: "Primer plano ilustrativo de un tambor de freno",
   },
 ] as const;
 
@@ -49,18 +49,18 @@ export default function ProductionSteps() {
     <section className="production-steps" aria-labelledby="production-steps-title">
       <div className="container">
         <div className="production-steps-heading">
-          <h2 id="production-steps-title">A clear path from the first reference to the component.</h2>
+          <h2 id="production-steps-title">Un camino claro desde la primera referencia hasta el componente.</h2>
           <div className="production-steps-controls">
             <span>{String(active + 1).padStart(2, "0")} / 04</span>
-            <button type="button" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label="Previous production step"><ArrowLeftIcon size={24} aria-hidden="true" /></button>
-            <button type="button" onClick={() => goTo(active + 1)} disabled={active === steps.length - 1} aria-label="Next production step"><ArrowRightIcon size={24} aria-hidden="true" /></button>
+            <button type="button" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label="Etapa de producción anterior"><ArrowLeftIcon size={24} aria-hidden="true" /></button>
+            <button type="button" onClick={() => goTo(active + 1)} disabled={active === steps.length - 1} aria-label="Etapa de producción siguiente"><ArrowRightIcon size={24} aria-hidden="true" /></button>
           </div>
         </div>
         <div
           className="production-steps-track"
           ref={trackRef}
           role="region"
-          aria-label="Production steps"
+          aria-label="Etapas de producción"
           tabIndex={0}
           onScroll={(event) => {
             const track = event.currentTarget;

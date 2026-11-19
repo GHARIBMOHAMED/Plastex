@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Transport",
   description:
     "Discuss transport requirements for Plastex Maroc brake and clutch components from Tangier to destination markets in Europe, Asia, and Africa.",
-  alternates: { canonical: "/en/expertise/transport/", languages: { fr: "/expertise/transport/", en: "/en/expertise/transport/" } },
+  alternates: { canonical: "/en/expertise/transport/", languages: { fr: "/expertise/transport/", en: "/en/expertise/transport/", es: "/es/expertise/transport/" } },
   openGraph: { locale: "en_US",
     title: "Transport | Plastex Maroc",
     description:

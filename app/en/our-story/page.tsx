@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Our Story",
   description:
     "Discover Plastex Maroc's approach to brake and clutch components, in-house production, and international supply from Tangier, Morocco.",
-  alternates: { canonical: "/en/our-story/", languages: { fr: "/our-story/", en: "/en/our-story/" } },
+  alternates: { canonical: "/en/our-story/", languages: { fr: "/our-story/", en: "/en/our-story/", es: "/es/our-story/" } },
   openGraph: { locale: "en_US",
     title: "Our Story | Plastex Maroc",
     description:

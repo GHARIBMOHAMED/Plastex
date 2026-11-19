@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Transport",
   description:
     "Discutez des besoins de transport des composants de freinage et d’embrayage Plastex Maroc depuis Tanger vers l’Europe, l’Asie et l’Afrique.",
-  alternates: { canonical: "/expertise/transport/", languages: { fr: "/expertise/transport/", en: "/en/expertise/transport/" } },
+  alternates: { canonical: "/expertise/transport/", languages: { fr: "/expertise/transport/", en: "/en/expertise/transport/", es: "/es/expertise/transport/" } },
   openGraph: { locale: "fr_MA",
     title: "Transport | Plastex Maroc",
     description:

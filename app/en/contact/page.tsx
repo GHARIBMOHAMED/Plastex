@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Contact Our Commercial Team",
   description:
     "Contact Plastex Maroc in Tangier about brake discs, clutch discs, brake drums, brake pads, and international sourcing enquiries.",
-  alternates: { canonical: "/en/contact/", languages: { fr: "/contact/", en: "/en/contact/" } },
+  alternates: { canonical: "/en/contact/", languages: { fr: "/contact/", en: "/en/contact/", es: "/es/contact/" } },
 };
 
 export default function ContactPage() {

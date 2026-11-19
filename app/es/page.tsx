@@ -13,9 +13,9 @@ import SolarEnergy from "./solar-energy";
 import ScrollFillHeadline from "./scroll-fill-headline";
 
 export const metadata: Metadata = {
-  title: "Brake & Clutch Components from Tangier",
-  description: "Plastex Maroc makes brake and clutch components in Tangier, uses solar energy to help reduce carbon emissions, and serves professional buyers across Europe, Asia, and Africa.",
-  alternates: { canonical: "/es/", languages: { fr: "/", en: "/es/" } },
+  title: "Componentes de freno y embrague de Tánger",
+  description: "Plastex Maroc fabrica componentes de freno y embrague en Tánger, utiliza energía solar para contribuir a reducir las emisiones de carbono y atiende a compradores profesionales de Europa, Asia y África.",
+  alternates: { canonical: "/es/", languages: { fr: "/", en: "/en/", es: "/es/" } },
 };
 
 export default function Home() {
@@ -23,33 +23,33 @@ export default function Home() {
     <>
       <section className="hero apc-inspired" data-enter>
         <HeroVideo source="/videos/plastex-home-hero.mp4" />
-        <span className="hero-film-note">Illustrative footage</span>
+        <span className="hero-film-note">Imágenes ilustrativas</span>
         <div className="container hero-inner">
           <div className="hero-copy">
             <h1>
-              Makers of brake
+              Fabricantes de componentes
               <br />
-              &amp; clutch components
+              de freno y embrague
             </h1>
           </div>
         </div>
         <div className="hero-bottom container">
-          <span>Made in Tangier.<br />Made for motion.</span>
-          <span className="hero-scroll">SCROLL TO EXPLORE <ArrowDownIcon size={14} aria-hidden="true" /></span>
-          <Link href="/es/contact/" className="hero-contact">A question for our team? <span><EnvelopeSimpleIcon size={22} /></span></Link>
+          <span>Fabricados en Tánger.<br />Pensados para el movimiento.</span>
+          <span className="hero-scroll">DESLIZA PARA DESCUBRIR <ArrowDownIcon size={14} aria-hidden="true" /></span>
+          <Link href="/es/contact/" className="hero-contact">¿Una pregunta para nuestro equipo? <span><EnvelopeSimpleIcon size={22} /></span></Link>
         </div>
       </section>
       <section className="intro-section container">
         <div className="intro-grid">
           <div className="intro-statement">
-            <ScrollFillHeadline id="home-intro-title" text="We make brake and clutch components. We also offer brake drums and brake pads for professional buyers." />
+            <ScrollFillHeadline id="home-intro-title" text="Fabricamos componentes de freno y embrague. También ofrecemos tambores y pastillas de freno a compradores profesionales." />
             <Link className="button-dark" href="#products">
-              View our products <Arrow diagonal />
+              Ver nuestros productos <Arrow diagonal />
             </Link>
           </div>
           <div className="intro-aside">
-            <h3>Our components</h3>
-            <nav aria-label="Products from Plastex Maroc">
+            <h3>Nuestros componentes</h3>
+            <nav aria-label="Productos de Plastex Maroc">
               {productLinks.map((item) => (
                 <Link href={item.href} key={item.href}>{item.label}</Link>
               ))}
@@ -64,18 +64,18 @@ export default function Home() {
       <SolarEnergy />
       <section className="reach-section container">
         <div className="section-topline">
-          <span className="section-index">04 / REACH</span>
+          <span className="section-index">04 / PRESENCIA</span>
         </div>
         <div className="reach-grid">
           <div>
             <h2>
-              FROM TANGIER
+              DESDE TÁNGER
               <br />
-              <em>TO EVERYWHERE.</em>
+              <em>HACIA EL MUNDO.</em>
             </h2>
             <p>
-              Located at the meeting point of major trade routes, Plastex Maroc
-              serves partners across Europe, Asia, and Africa.
+              Situada en el cruce de grandes rutas comerciales, Plastex Maroc
+              atiende a socios de Europa, Asia y África.
             </p>
           </div>
           <div className="reach-graphic">
@@ -83,13 +83,13 @@ export default function Home() {
             <div className="reach-circle two" />
             <div className="reach-circle three" />
             <div className="reach-center">
-              TANGIER
+              TÁNGER
               <br />
               <span>35.76° N · 5.83° W</span>
             </div>
-            <span className="reach-label europe">EUROPE</span>
+            <span className="reach-label europe">EUROPA</span>
             <span className="reach-label asia">ASIA</span>
-            <span className="reach-label africa">AFRICA</span>
+            <span className="reach-label africa">ÁFRICA</span>
           </div>
         </div>
       </section>
@@ -97,27 +97,27 @@ export default function Home() {
         <div className="container contact-photo-frame">
           <Image
             src="/images/dispatch-contact.png"
-            alt="Illustrative dispatch worker securing a cargo truck outside a warehouse"
+            alt="Escena ilustrativa de un trabajador preparando un camión de carga"
             fill
             sizes="(max-width: 760px) 100vw, 85vw"
           />
           <div className="contact-photo-card">
             <div className="contact-card-heading">
-              <h2 id="contact-photo-heading">We’re here to help.</h2>
+              <h2 id="contact-photo-heading">Estamos aquí para ayudarte.</h2>
               <Image src="/images/plastex-logo.png" alt="" width={105} height={27} />
             </div>
             <p>
-              Looking for brake or clutch components? Tell us the application,
-              specifications, and volume you need. Our team in Tangier will help
-              with your enquiry.
+              ¿Buscas componentes de freno o embrague? Indícanos la aplicación,
+              las especificaciones y el volumen que necesitas. Nuestro equipo de Tánger te ayudará
+              con tu consulta.
             </p>
             <div className="contact-card-actions">
               <div className="contact-quick-links">
-                <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={22} aria-hidden="true" /></a>
-                <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={22} aria-hidden="true" /></a>
+                <a href="mailto:commercial@plastexmaroc.com" aria-label="Escribir a Plastex Maroc"><EnvelopeSimpleIcon size={22} aria-hidden="true" /></a>
+                <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={22} aria-hidden="true" /></a>
               </div>
               <Link href="/es/contact/" className="contact-card-main-link">
-                Contact our team <span><ArrowRightIcon size={25} aria-hidden="true" /></span>
+                Contactar con el equipo <span><ArrowRightIcon size={25} aria-hidden="true" /></span>
               </Link>
             </div>
           </div>

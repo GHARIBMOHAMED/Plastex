@@ -6,28 +6,28 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 const brakeSteps = [
   {
-    title: "Start with the application",
-    copy: "Tell us where the disc will be used and share a part reference if you have one.",
+    title: "Empezar por la aplicación",
+    copy: "Indíquenos dónde se utilizará el disco y comparta una referencia si la tiene.",
     image: "/images/brake-scene.webp",
-    alt: "Illustrative close-up of a brake disc",
+    alt: "Primer plano ilustrativo de un disco de freno",
   },
   {
-    title: "Review the dimensions",
-    copy: "Drawings and technical requirements give our team a clear basis for the conversation.",
+    title: "Revisar las dimensiones",
+    copy: "Los planos y requisitos técnicos ofrecen a nuestro equipo una base clara para la conversación.",
     image: "/images/brake-disc-cutout.png",
-    alt: "Silver brake disc rotor product illustration",
+    alt: "Ilustración de un disco de freno plateado",
   },
   {
-    title: "Discuss production",
-    copy: "We can discuss brake disc manufacturing and the information needed for a supply plan.",
+    title: "Hablar de producción",
+    copy: "Podemos hablar de la fabricación de discos de freno y de la información necesaria para planificar el suministro.",
     image: "/images/brake-film.webp",
-    alt: "Illustrative brake disc machining scene",
+    alt: "Escena ilustrativa de mecanizado de un disco de freno",
   },
   {
-    title: "Plan supply",
-    copy: "Share expected volumes and the destination market so our team can respond to your enquiry.",
+    title: "Planificar el suministro",
+    copy: "Comparta el volumen previsto y el mercado de destino para que nuestro equipo responda a su consulta.",
     image: "/images/factory-film.webp",
-    alt: "Illustrative automotive component workshop",
+    alt: "Taller ilustrativo de componentes de automoción",
   },
 ];
 
@@ -49,12 +49,12 @@ export function BrakeProcessSlider() {
   return (
     <section className="reference-steps" aria-labelledby="reference-steps-heading">
       <div className="container">
-        <h2 id="reference-steps-heading">From first brief to supply plan.</h2>
+        <h2 id="reference-steps-heading">De la primera consulta al plan de suministro.</h2>
         <div className="reference-steps-toolbar">
-          <p>Move through the steps<br />of a brake disc enquiry.</p>
+          <p>Recorra las etapas<br />de una consulta sobre discos de freno.</p>
           <div className="reference-steps-controls">
-            <button type="button" aria-label="Previous step" onClick={() => move(index - 1)} disabled={index === 0}><ArrowLeftIcon size={22} aria-hidden="true" /></button>
-            <button type="button" aria-label="Next step" onClick={() => move(index + 1)} disabled={index === brakeSteps.length - 1}><ArrowRightIcon size={22} aria-hidden="true" /></button>
+            <button type="button" aria-label="Etapa anterior" onClick={() => move(index - 1)} disabled={index === 0}><ArrowLeftIcon size={22} aria-hidden="true" /></button>
+            <button type="button" aria-label="Etapa siguiente" onClick={() => move(index + 1)} disabled={index === brakeSteps.length - 1}><ArrowRightIcon size={22} aria-hidden="true" /></button>
           </div>
         </div>
         <div className="reference-steps-track" ref={trackRef} onScroll={(event) => {
@@ -102,13 +102,13 @@ export function ProductGallery({
       <div className="container reference-gallery-grid">
         <div className="reference-gallery-copy">
           <div>
-            <span className="product-gallery-kicker">{name} / A closer look</span>
+            <span className="product-gallery-kicker">{name} / En detalle</span>
             <h2 id="reference-gallery-heading">{title}</h2>
             <p>{description}</p>
           </div>
-          <div className="reference-gallery-thumbs" role="group" aria-label={`${name} image views`}>
+          <div className="reference-gallery-thumbs" role="group" aria-label={`${name} vistas de imágenes`}>
             {images.map((item, index) => (
-              <button type="button" key={item.src} className={active === index ? "is-active" : ""} onClick={() => setActive(index)} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} aria-label={`Show ${name.toLowerCase()} view ${index + 1} of ${images.length}`} aria-pressed={active === index}>
+              <button type="button" key={item.src} className={active === index ? "is-active" : ""} onClick={() => setActive(index)} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)} aria-label={`Mostrar vista ${index + 1} de ${images.length} de ${name.toLowerCase()}`} aria-pressed={active === index}>
                 <Image src={item.src} alt="" fill sizes="80px" />
               </button>
             ))}
@@ -118,8 +118,8 @@ export function ProductGallery({
           <Image src={current.src} alt={current.alt} fill sizes="(max-width: 900px) 100vw, 54vw" />
           <span className="product-gallery-count">{String(active + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
           <div className="product-gallery-progress" aria-hidden="true"><span style={{ width: `${((active + 1) / images.length) * 100}%` }} /></div>
-          <div className="product-gallery-dots" role="group" aria-label={`${name} gallery pages`}>
-            {images.map((item, index) => <button type="button" key={item.src} className={active === index ? "is-active" : ""} onClick={() => setActive(index)} aria-label={`Show view ${index + 1}`} aria-pressed={active === index} />)}
+          <div className="product-gallery-dots" role="group" aria-label={`${name} páginas de la galería`}>
+            {images.map((item, index) => <button type="button" key={item.src} className={active === index ? "is-active" : ""} onClick={() => setActive(index)} aria-label={`Mostrar vista ${index + 1}`} aria-pressed={active === index} />)}
           </div>
         </div>
       </div>

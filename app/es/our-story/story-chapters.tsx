@@ -7,31 +7,31 @@ import { ArrowRightIcon } from "@phosphor-icons/react";
 
 const chapters = [
   {
-    title: "Production",
-    text: "Friction products and clutch disc assembly are part of the work we do in Tangier. Each new enquiry starts with the application and its requirements.",
+    title: "Producción",
+    text: "Los productos de fricción y el ensamblaje de discos de embrague forman parte de nuestro trabajo en Tánger. Cada nueva consulta comienza por la aplicación y sus requisitos.",
     image: "/images/factory-film.webp",
-    alt: "Illustrative machining floor with automotive components",
+    alt: "Planta de mecanizado ilustrativa con componentes de automoción",
     href: "/es/expertise/production/",
   },
   {
-    title: "Brake components",
-    text: "Brake discs and brake drums are part of our product range. We discuss the reference, dimensions, and supply needs with professional buyers.",
+    title: "Componentes de freno",
+    text: "Los discos y tambores de freno forman parte de nuestra gama. Tratamos las referencias, dimensiones y necesidades de suministro con compradores profesionales.",
     image: "/images/brake-scene.webp",
-    alt: "Illustrative close-up of a ventilated brake disc",
+    alt: "Primer plano ilustrativo de un disco de freno ventilado",
     href: "/es/brake-discs/",
   },
   {
-    title: "Clutch components",
-    text: "Clutch friction products connect our manufacturing work with the demands of vehicle applications and aftermarket supply.",
+    title: "Componentes de embrague",
+    text: "Los productos de fricción para embragues vinculan nuestra fabricación con las necesidades de las aplicaciones de vehículos y el mercado de recambios.",
     image: "/images/clutch-scene.webp",
-    alt: "Illustrative close-up of a clutch disc assembly",
+    alt: "Primer plano ilustrativo de un disco de embrague ensamblado",
     href: "/es/clutch-discs/",
   },
   {
-    title: "International supply",
-    text: "From Morocco, our commercial conversations reach buyers in Europe, Asia, and Africa. Clear details help each request move forward.",
+    title: "Suministro internacional",
+    text: "Desde Marruecos, nuestro equipo comercial atiende a compradores de Europa, Asia y África. Los datos claros ayudan a avanzar con cada solicitud.",
     image: "/images/transport-hero.webp",
-    alt: "Illustrative freight transport at an industrial loading bay",
+    alt: "Transporte de mercancías ilustrativo en un muelle industrial",
     href: "/es/expertise/transport/",
   },
 ] as const;
@@ -86,27 +86,27 @@ export default function StoryChapters() {
               event.currentTarget.releasePointerCapture(event.pointerId);
             }}
             onPointerCancel={() => { dragRef.current = null; }}
-            aria-label="Story images. Swipe or drag to browse chapters."
+            aria-label="Imágenes de la historia. Deslice o arrastre para explorar los capítulos."
           >
             {chapters.map((item) => (
               <div className="story-chapter-image" key={item.image}>
                 <Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 85vw, 50vw" draggable={false} />
-                <span>Illustrative imagery</span>
+                <span>Imágenes ilustrativas</span>
               </div>
             ))}
           </div>
           <div className="story-chapter-caption" aria-live="polite">
             <div><span>{String(selected + 1).padStart(2, "0")} / 04</span><h3>{chapter.title}</h3><p>{chapter.text}</p></div>
-            <Link href={chapter.href} aria-label={`Explore ${chapter.title}`}><ArrowRightIcon size={25} aria-hidden="true" /></Link>
+            <Link href={chapter.href} aria-label={`Explorar ${chapter.title}`}><ArrowRightIcon size={25} aria-hidden="true" /></Link>
           </div>
         </div>
         <div className="story-chapters-side">
           <div className="story-chapters-intro">
-            <span>02 / THE CONTINUING STORY</span>
-            <h2 id="story-chapters-title">Built through the work we do.</h2>
-            <p>Explore four parts of Plastex today. Drag the images or choose a chapter.</p>
+            <span>02 / UNA HISTORIA EN MARCHA</span>
+            <h2 id="story-chapters-title">Una historia construida con nuestro trabajo.</h2>
+            <p>Conozca cuatro aspectos de Plastex hoy. Arrastre las imágenes o elija un capítulo.</p>
           </div>
-          <div className="story-chapter-controls" role="group" aria-label="Story chapters">
+          <div className="story-chapter-controls" role="group" aria-label="Capítulos de nuestra historia">
             {chapters.map((item, index) => (
               <button
                 key={item.title}

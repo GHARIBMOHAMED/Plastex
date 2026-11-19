@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Contacter notre équipe commerciale",
   description:
     "Contactez Plastex Maroc à Tanger pour vos demandes de disques de frein, disques d’embrayage, tambours, plaquettes et approvisionnement international.",
-  alternates: { canonical: "/contact/", languages: { fr: "/contact/", en: "/en/contact/" } },
+  alternates: { canonical: "/contact/", languages: { fr: "/contact/", en: "/en/contact/", es: "/es/contact/" } },
 };
 
 export default function ContactPage() {

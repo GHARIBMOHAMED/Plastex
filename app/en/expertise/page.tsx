@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Our Expertise",
   description:
     "Explore Plastex Maroc expertise in brake and clutch friction products, application-led enquiries, and international component supply from Tangier.",
-  alternates: { canonical: "/en/expertise/", languages: { fr: "/expertise/", en: "/en/expertise/" } },
+  alternates: { canonical: "/en/expertise/", languages: { fr: "/expertise/", en: "/en/expertise/", es: "/es/expertise/" } },
   openGraph: { locale: "en_US",
     title: "Our Expertise | Plastex Maroc",
     description:

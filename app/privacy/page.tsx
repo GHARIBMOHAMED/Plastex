@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description:
     "Comment Plastex Maroc traite les informations transmises par ce site.",
-  alternates: { canonical: "/privacy/", languages: { fr: "/privacy/", en: "/en/privacy/" } },
+  alternates: { canonical: "/privacy/", languages: { fr: "/privacy/", en: "/en/privacy/", es: "/es/privacy/" } },
 };
 export default function PrivacyPage() {
   return (

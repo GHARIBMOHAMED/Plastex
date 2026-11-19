@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "In-house Production",
   description:
     "Explore in-house brake and clutch friction product manufacturing, clutch disc assembly, and brake drum semi-finishing at Plastex Maroc in Tangier.",
-  alternates: { canonical: "/en/expertise/production/", languages: { fr: "/expertise/production/", en: "/en/expertise/production/" } },
+  alternates: { canonical: "/en/expertise/production/", languages: { fr: "/expertise/production/", en: "/en/expertise/production/", es: "/es/expertise/production/" } },
   openGraph: { locale: "en_US",
     title: "In-house Production | Plastex Maroc",
     description:

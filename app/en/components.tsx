@@ -85,7 +85,7 @@ function MenuPanel() {
       </div>
       <div className="menu-panel-columns">
         <div className="menu-panel-column"><strong>Plastex</strong><Link href="/en/">Home</Link><Link href="/en/our-story/">Our story</Link><Link href="/en/careers/">Join us</Link><Link href="/en/contact/">Contact</Link></div>
-        <div className="menu-panel-column"><strong>Products</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
+        <div className="menu-panel-column"><strong>Products</strong>{productLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}<Link href="/en/catalogue/login/">Partner catalogue</Link></div>
         <div className="menu-panel-column"><strong>Expertise</strong><Link href="/en/expertise/">Our expertise</Link><Link href="/en/expertise/production/">Production</Link><Link href="/en/expertise/logistics/">Logistics</Link><Link href="/en/expertise/transport/">Transport</Link></div>
         <div className="menu-panel-column"><strong>Quality</strong><Link href="/en/faq/">Questions and answers</Link><Link href="/en/contact/">Request certificates</Link></div>
         <div className="menu-panel-column"><strong>Information</strong><Link href="/en/privacy/">Privacy policy</Link><Link href="/en/terms/">Terms of use</Link></div>
@@ -165,6 +165,7 @@ export function Footer() {
               {productLinks.map((item) => (
                 <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
+              <Link href="/en/catalogue/login/">Partner catalogue</Link>
             </nav>
             <div className="footer-column footer-contact-details">
               <h2>Company details</h2>

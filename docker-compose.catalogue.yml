@@ -1,0 +1,55 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: plastex
+      POSTGRES_DB: plastex
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - catalogue_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plastex -d plastex"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.catalogue
+    command: npm run catalogue:migrate
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+    depends_on:
+      db:
+        condition: service_healthy
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.catalogue
+    restart: unless-stopped
+    command: npm run start
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+      CATALOGUE_UPLOAD_DIR: /app/private/catalogue-uploads
+    volumes:
+      - catalogue_uploads:/app/private/catalogue-uploads
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.catalogue
+    restart: unless-stopped
+    command: npm run catalogue:worker
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+volumes:
+  catalogue_pg:
+  catalogue_uploads:

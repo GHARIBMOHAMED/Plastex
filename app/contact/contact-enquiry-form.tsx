@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 
 export default function ContactEnquiryForm() {
   const [opened, setOpened] = useState(false);
+  const [enquiry, setEnquiry] = useState("");
+  useEffect(() => { const part = new URLSearchParams(window.location.search).get("part"); if (part && /^[A-Za-z0-9._/-]{2,80}$/.test(part)) setEnquiry(`Référence Plastex : ${part}\n\n`); }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,7 +41,7 @@ export default function ContactEnquiryForm() {
           <option>Autre demande</option>
         </select>
       </label>
-      <label>Décrivez votre besoin <textarea name="message" rows={6} required /></label>
+      <label>Décrivez votre besoin <textarea name="message" rows={6} value={enquiry} onChange={event => setEnquiry(event.target.value)} required /></label>
       <p className="reference-form-note">Cela ouvrira votre messagerie avec votre demande préremplie. Envoyez le message depuis votre messagerie pour nous contacter.</p>
       <button type="submit">Préparer l’e-mail <ArrowRightIcon size={20} aria-hidden="true" /></button>
       {opened && <p className="reference-form-status" role="status">Votre messagerie devrait s’ouvrir. Envoyez le message préparé pour nous contacter.</p>}

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Notre expertise",
   description:
     "Découvrez l’expertise de Plastex Maroc dans les produits de friction pour freins et embrayages, les demandes techniques et l’approvisionnement international depuis Tanger.",
-  alternates: { canonical: "/expertise/", languages: { fr: "/expertise/", en: "/en/expertise/" } },
+  alternates: { canonical: "/expertise/", languages: { fr: "/expertise/", en: "/en/expertise/", es: "/es/expertise/" } },
   openGraph: { locale: "fr_MA",
     title: "Notre expertise | Plastex Maroc",
     description:

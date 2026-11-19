@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Logistique",
   description:
     "Préparez une demande claire d’approvisionnement en composants de freinage et d’embrayage avec Plastex Maroc à Tanger. Parlons des produits, volumes, marchés et délais.",
-  alternates: { canonical: "/expertise/logistics/", languages: { fr: "/expertise/logistics/", en: "/en/expertise/logistics/" } },
+  alternates: { canonical: "/expertise/logistics/", languages: { fr: "/expertise/logistics/", en: "/en/expertise/logistics/", es: "/es/expertise/logistics/" } },
   openGraph: { locale: "fr_MA",
     title: "Logistique | Plastex Maroc",
     description:

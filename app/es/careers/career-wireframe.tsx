@@ -22,7 +22,7 @@ export default function CareerWireframe() {
     <button
       type="button"
       className="career-wireframe"
-      aria-label="Interactive Plastex line mark. Move your pointer or use arrow keys to rotate it."
+      aria-label="Símbolo lineal interactivo de Plastex. Mueva el puntero o use las flechas del teclado para girarlo."
       onPointerMove={(event) => {
         const box = event.currentTarget.getBoundingClientRect();
         tilt((0.5 - (event.clientY - box.top) / box.height) * 7, ((event.clientX - box.left) / box.width - 0.5) * 9);

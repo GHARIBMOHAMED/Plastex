@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Notre histoire",
   description:
     "Découvrez la démarche de Plastex Maroc pour les composants de freinage et d’embrayage, sa production en interne et son offre internationale depuis Tanger.",
-  alternates: { canonical: "/our-story/", languages: { fr: "/our-story/", en: "/en/our-story/" } },
+  alternates: { canonical: "/our-story/", languages: { fr: "/our-story/", en: "/en/our-story/", es: "/es/our-story/" } },
   openGraph: { locale: "fr_MA",
     title: "Notre histoire | Plastex Maroc",
     description:

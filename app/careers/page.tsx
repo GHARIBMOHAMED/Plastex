@@ -9,7 +9,7 @@ import { careerJobs } from "./jobs";
 export const metadata: Metadata = {
   title: "Carrières",
   description: "PLASTEX MAROC recrute un(e) Comptable Confirmé(e) et un(e) Chargé(e) de Logistique à Tanger. Consultez les offres et postulez en ligne.",
-  alternates: { canonical: "/careers/", languages: { fr: "/careers/", en: "/en/careers/" } },
+  alternates: { canonical: "/careers/", languages: { fr: "/careers/", en: "/en/careers/", es: "/es/careers/" } },
   openGraph: { locale: "fr_MA", title: "Carrières chez Plastex Maroc", description: "Participez à la fabrication des composants qui font avancer les véhicules." },
 };
 

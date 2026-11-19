@@ -10,14 +10,14 @@ import ProductionSteps from "./production-steps";
 import ScrollFillHeadline from "../../scroll-fill-headline";
 
 export const metadata: Metadata = {
-  title: "In-house Production",
+  title: "Producción propia",
   description:
-    "Explore in-house brake and clutch friction product manufacturing, clutch disc assembly, and brake drum semi-finishing at Plastex Maroc in Tangier.",
-  alternates: { canonical: "/es/expertise/production/", languages: { fr: "/expertise/production/", en: "/es/expertise/production/" } },
+    "Conozca la fabricación de productos de fricción para frenos y embragues, el ensamblaje de discos de embrague y el semiacabado de tambores de freno de Plastex Maroc en Tánger.",
+  alternates: { canonical: "/es/expertise/production/", languages: { fr: "/expertise/production/", en: "/en/expertise/production/", es: "/es/expertise/production/" } },
   openGraph: { locale: "es_ES",
-    title: "In-house Production | Plastex Maroc",
+    title: "Producción propia | Plastex Maroc",
     description:
-      "A closer look at Plastex Maroc production and component supply in Tangier.",
+      "Conozca la producción y el suministro de componentes de Plastex Maroc en Tánger.",
   },
 };
 
@@ -28,35 +28,35 @@ export default function ProductionPage() {
         <Image
           className="production-hero-image"
           src="/images/factory-film.webp"
-          alt="Illustrative brake component production scene"
+          alt="Escena ilustrativa de producción de componentes de freno"
           fill
           priority
           sizes="100vw"
         />
         <div className="container reference-product-hero-inner">
-          <h1 id="production-title">In-house<br />production.</h1>
-          <p className="reference-product-tagline">Brake and clutch friction products made in Tangier.</p>
+          <h1 id="production-title">Producción<br />propia.</h1>
+          <p className="reference-product-tagline">Productos de fricción para frenos y embragues fabricados en Tánger.</p>
           <div className="reference-hero-contact">
-            <span>Discuss a component?</span>
-            <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
-            <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
+            <span>¿Quiere consultar sobre un componente?</span>
+            <a href="mailto:commercial@plastexmaroc.com" aria-label="Enviar correo a Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
+            <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
           </div>
         </div>
-        <span className="reference-film-note">Illustrative imagery</span>
+        <span className="reference-film-note">Imágenes ilustrativas</span>
       </section>
 
       <section className="production-intro" aria-labelledby="production-intro-title">
         <div className="container production-intro-grid">
           <div className="production-intro-copy">
-            <h2 id="production-intro-title">Production close to the people who know the part.</h2>
-            <p>Plastex Maroc manufactures brake and clutch friction products in Tangier and assembles clutch discs. We also carry out semi-finished work on the brake drums we supply.</p>
-            <p>Start with an application, part reference, drawing, or expected volume. Our team can use those details to discuss the component and the supply requirements with you.</p>
+            <h2 id="production-intro-title">Producción cerca de quienes conocen cada pieza.</h2>
+            <p>Plastex Maroc fabrica productos de fricción para frenos y embragues en Tánger y ensambla discos de embrague. También realiza trabajos de semiacabado en los tambores de freno que suministra.</p>
+            <p>Indíquenos la aplicación, una referencia, un plano o el volumen previsto. Con estos datos, nuestro equipo podrá hablar con usted del componente y sus requisitos de suministro.</p>
           </div>
           <div className="production-intro-aside">
-            <span>Explore further</span>
-            <Link href="/es/expertise/">Our expertise <ArrowRightIcon size={19} aria-hidden="true" /></Link>
-            <Link href="/es/brake-discs/">Brake discs <ArrowRightIcon size={19} aria-hidden="true" /></Link>
-            <Link href="/es/clutch-discs/">Clutch discs <ArrowRightIcon size={19} aria-hidden="true" /></Link>
+            <span>Seguir explorando</span>
+            <Link href="/es/expertise/">Nuestra experiencia <ArrowRightIcon size={19} aria-hidden="true" /></Link>
+            <Link href="/es/brake-discs/">Discos de freno <ArrowRightIcon size={19} aria-hidden="true" /></Link>
+            <Link href="/es/clutch-discs/">Discos de embrague <ArrowRightIcon size={19} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
@@ -66,11 +66,11 @@ export default function ProductionPage() {
       <section className="production-quality" aria-labelledby="production-quality-title">
         <div className="container production-quality-grid">
           <div className="production-quality-aside">
-            <span>QUALITY / DOCUMENTATION</span>
-            <h2 id="production-quality-title">Ask about our certifications.</h2>
+            <span>CALIDAD / DOCUMENTACIÓN</span>
+            <h2 id="production-quality-title">Consulte nuestras certificaciones.</h2>
             <div className="production-certifications"><span>TÜV</span><span>AFNOR</span></div>
           </div>
-          <ScrollFillHeadline id="production-quality-statement" text="Quality questions are part of a useful sourcing conversation. Our team can provide details of the TÜV and AFNOR certifications, including the applicable scope and documentation, when you enquire." />
+          <ScrollFillHeadline id="production-quality-statement" text="La calidad forma parte de toda conversación sobre suministro. Nuestro equipo puede facilitarle información sobre las certificaciones TÜV y AFNOR, incluidos su alcance y la documentación aplicable, cuando nos consulte." />
         </div>
       </section>
 
@@ -78,22 +78,22 @@ export default function ProductionPage() {
         <div className="container contact-photo-frame">
           <Image
             src="/images/dispatch-contact.png"
-            alt="Illustrative dispatch worker securing a cargo truck outside a warehouse"
+            alt="Trabajador ilustrativo asegurando la carga de un camión junto a un almacén"
             fill
             sizes="(max-width: 760px) 100vw, 85vw"
           />
           <div className="contact-photo-card">
             <div className="contact-card-heading">
-              <h2 id="production-contact-title">Let’s talk production.</h2>
+              <h2 id="production-contact-title">Hablemos de producción.</h2>
               <Image src="/images/plastex-logo.png" alt="" width={105} height={27} />
             </div>
-            <p>Tell us which brake or clutch component you need, where it will be supplied, and what information you already have. We’ll take the conversation from there.</p>
+            <p>Indíquenos qué componente de freno o embrague necesita, adónde se suministrará y qué información tiene. Continuaremos la conversación a partir de ahí.</p>
             <div className="contact-card-actions">
               <div className="contact-quick-links">
-                <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={22} aria-hidden="true" /></a>
-                <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={22} aria-hidden="true" /></a>
+                <a href="mailto:commercial@plastexmaroc.com" aria-label="Enviar correo a Plastex Maroc"><EnvelopeSimpleIcon size={22} aria-hidden="true" /></a>
+                <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={22} aria-hidden="true" /></a>
               </div>
-              <Link href="/es/contact/" className="contact-card-main-link">Contact our team <span><ArrowRightIcon size={25} aria-hidden="true" /></span></Link>
+              <Link href="/es/contact/" className="contact-card-main-link">Contacte con nuestro equipo <span><ArrowRightIcon size={25} aria-hidden="true" /></span></Link>
             </div>
           </div>
         </div>

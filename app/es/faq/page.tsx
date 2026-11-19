@@ -4,47 +4,47 @@ import { PlusIcon } from "@phosphor-icons/react/ssr";
 import { Arrow } from "../components";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
+  title: "Preguntas frecuentes",
   description:
-    "Answers to common questions about Plastex Maroc products, sourcing enquiries, and international supply.",
-  alternates: { canonical: "/es/faq/", languages: { fr: "/faq/", en: "/es/faq/" } },
+    "Respuestas a preguntas frecuentes sobre los productos, las consultas de suministro y la actividad internacional de Plastex Maroc.",
+  alternates: { canonical: "/es/faq/", languages: { fr: "/faq/", en: "/en/faq/", es: "/es/faq/" } },
 };
 const questions = [
   [
-    "What products can I enquire about?",
-    "You can contact us about brake discs, clutch discs, brake drums, and brake pads. Share the vehicle application or part reference so our commercial team can review your request.",
+    "¿Sobre qué productos puedo consultar?",
+    "Puede consultarnos sobre discos de freno, discos de embrague, tambores y pastillas de freno. Indique la aplicación del vehículo o la referencia de la pieza para que nuestro equipo comercial estudie su solicitud.",
   ],
   [
-    "Does Plastex Maroc manufacture every product shown?",
-    "Plastex Maroc manufactures brake and clutch friction products. Brake drums are supplied through resale, with semi-finished work carried out by Plastex Maroc. Ask our team for the production or sourcing details of a specific brake pad reference.",
+    "¿Fabrica Plastex Maroc todos los productos mostrados?",
+    "Plastex Maroc fabrica productos de fricción para frenos y embragues. Los tambores de freno se revenden y Plastex Maroc realiza trabajos de semiacabado. Consulte a nuestro equipo sobre la fabricación o el suministro de una referencia concreta de pastillas de freno.",
   ],
   [
-    "Can international buyers contact your team?",
-    "Yes. Plastex Maroc works with professional partners across Europe, Asia, and Africa. Contact our commercial team with your destination market and requirements.",
+    "¿Pueden contactar compradores internacionales?",
+    "Sí. Plastex Maroc trabaja con profesionales de Europa, Asia y África. Indique a nuestro equipo comercial su mercado de destino y sus necesidades.",
   ],
   [
-    "What details should I include in an enquiry?",
-    "Include the product type, vehicle or equipment application, part numbers or drawings if available, expected volume, and destination country.",
+    "¿Qué datos debo incluir en una consulta?",
+    "Incluya el tipo de producto, la aplicación del vehículo o equipo, referencias o planos si dispone de ellos, el volumen previsto y el país de destino.",
   ],
   [
-    "Where is Plastex Maroc located?",
-    "Plastex Maroc is based in the industrial zone on Route de Tétouan in Tangier, Morocco.",
+    "¿Dónde se encuentra Plastex Maroc?",
+    "Plastex Maroc se encuentra en la zona industrial de la Route de Tétouan, en Tánger, Marruecos.",
   ],
 ];
 export default function FaqPage() {
   return (
     <section className="inner-page container">
       <div className="eyebrow dark">
-        <span className="eyebrow-line" /> SUPPORT
+        <span className="eyebrow-line" /> AYUDA
       </div>
       <h1>
-        Questions<span className="period">.</span>
+        Preguntas<span className="period">.</span>
         <br />
-        <em>Answered.</em>
+        <em>Respuestas.</em>
       </h1>
       <div className="faq-layout">
         <p>
-          Find the information you need to begin a conversation with our team.
+          Encuentre la información necesaria para iniciar una conversación con nuestro equipo.
         </p>
         <div className="faq-list">
           {questions.map(([q, a]) => (
@@ -61,9 +61,9 @@ export default function FaqPage() {
         </div>
       </div>
       <div className="faq-cta">
-        Have a different question?{" "}
+        ¿Tiene otra pregunta?{" "}
         <Link href="/es/contact/">
-          Contact our team <Arrow diagonal />
+          Contacte con nuestro equipo <Arrow diagonal />
         </Link>
       </div>
     </section>

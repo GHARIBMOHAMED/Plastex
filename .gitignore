@@ -4,5 +4,8 @@ node_modules
 out
 *.tsbuildinfo
 .env.local
+.env
+private/
+.local-catalogue/
 .local-applications/
 .dev-server.*.log

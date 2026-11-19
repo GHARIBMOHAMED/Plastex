@@ -9,7 +9,7 @@ import { careerJobs } from "./jobs";
 export const metadata: Metadata = {
   title: "Careers",
   description: "Plastex Maroc is hiring an experienced accountant and a logistics officer in Tangier. View both roles and apply online.",
-  alternates: { canonical: "/en/careers/", languages: { fr: "/careers/", en: "/en/careers/" } },
+  alternates: { canonical: "/en/careers/", languages: { fr: "/careers/", en: "/en/careers/", es: "/es/careers/" } },
   openGraph: { locale: "en_US", title: "Careers at Plastex Maroc", description: "Work on the components that keep people moving." },
 };
 

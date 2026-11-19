@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Production en interne",
   description:
     "Découvrez la fabrication de produits de friction pour freins et embrayages, l’assemblage de disques d’embrayage et la semi-finition de tambours chez Plastex Maroc à Tanger.",
-  alternates: { canonical: "/expertise/production/", languages: { fr: "/expertise/production/", en: "/en/expertise/production/" } },
+  alternates: { canonical: "/expertise/production/", languages: { fr: "/expertise/production/", en: "/en/expertise/production/", es: "/es/expertise/production/" } },
   openGraph: { locale: "fr_MA",
     title: "Production en interne | Plastex Maroc",
     description:

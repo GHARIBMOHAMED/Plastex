@@ -4,21 +4,37 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
+    "catalogue:worker": "tsx scripts/catalogue-worker.ts",
+    "catalogue:migrate": "tsx scripts/catalogue-migrate.ts",
+    "catalogue:bootstrap": "tsx scripts/catalogue-bootstrap.ts",
+    "catalogue:pilot": "tsx scripts/catalogue-pilot.ts",
+    "catalogue:local": "tsx scripts/catalogue-local.ts",
+    "catalogue:smoke": "tsx scripts/catalogue-smoke.ts",
+    "test:catalogue": "tsx --test tests/catalogue.test.ts",
     "start": "next start"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
+    "bcryptjs": "^3.0.3",
+    "cheerio": "^1.2.0",
+    "crawlee": "^3.18.2",
     "mammoth": "^1.13.0",
     "next": "16.4.6",
     "pdf-parse": "^2.4.5",
+    "pg": "^8.23.1",
+    "playwright": "^1.65.1",
     "react": "19.2.1",
     "react-dom": "19.2.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "embedded-postgres": "^18.7.0-beta.19",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

@@ -15,14 +15,14 @@ import { productLinks } from "../data";
 import ScrollFillHeadline from "../scroll-fill-headline";
 
 export const metadata: Metadata = {
-  title: "Our Expertise",
+  title: "Nuestra experiencia",
   description:
-    "Explore Plastex Maroc expertise in brake and clutch friction products, application-led enquiries, and international component supply from Tangier.",
-  alternates: { canonical: "/es/expertise/", languages: { fr: "/expertise/", en: "/es/expertise/" } },
+    "Conozca la experiencia de Plastex Maroc en productos de fricción para frenos y embragues, consultas técnicas y suministro internacional de componentes desde Tánger.",
+  alternates: { canonical: "/es/expertise/", languages: { fr: "/expertise/", en: "/en/expertise/", es: "/es/expertise/" } },
   openGraph: { locale: "es_ES",
-    title: "Our Expertise | Plastex Maroc",
+    title: "Nuestra experiencia | Plastex Maroc",
     description:
-      "Manufacturing, product conversations, and international supply for professional brake and clutch component buyers.",
+      "Fabricación, diálogo técnico y suministro internacional para compradores profesionales de componentes de freno y embrague.",
   },
 };
 
@@ -30,49 +30,49 @@ const capabilities = [
   {
     id: "production",
     number: "01",
-    title: "Production",
+    title: "Producción",
     description:
-      "Plastex Maroc manufactures brake and clutch friction products in Tangier and assembles clutch discs. We also carry out semi-finished work on brake drums supplied through resale.",
+      "Plastex Maroc fabrica productos de fricción para frenos y embragues en Tánger y ensambla discos de embrague. También realiza trabajos de semiacabado en los tambores de freno que revende.",
     image: "/images/workshop-contact.webp",
-    alt: "Illustrative workshop scene with brake and clutch components",
+    alt: "Taller ilustrativo con componentes de freno y embrague",
     href: "/es/expertise/production/",
-    action: "Explore in-house production",
+    action: "Conozca la producción propia",
     icon: FactoryIcon,
   },
   {
     id: "technical-dialogue",
     number: "02",
-    title: "Technical dialogue",
+    title: "Diálogo técnico",
     description:
-      "A useful enquiry starts with the application, part reference, drawing, and expected volume. Share what you have, and our team can discuss your component requirements with you.",
+      "Una consulta útil empieza por la aplicación, la referencia, un plano y el volumen previsto. Comparta la información disponible y nuestro equipo podrá estudiar sus necesidades.",
     image: "/images/clutch-scene.webp",
-    alt: "Illustrative clutch disc close-up",
+    alt: "Primer plano ilustrativo de un disco de embrague",
     href: "/es/clutch-discs/",
-    action: "Explore clutch discs",
+    action: "Explore los discos de embrague",
     icon: RulerIcon,
   },
   {
     id: "logistics",
     number: "03",
-    title: "Logistics",
+    title: "Logística",
     description:
-      "We work with professional buyers across Europe, Asia, and Africa. Tell us the destination market and the components you need so we can start a focused supply conversation.",
+      "Trabajamos con compradores profesionales de Europa, Asia y África. Indíquenos el mercado de destino y los componentes necesarios para iniciar una conversación concreta sobre suministro.",
     image: "/images/dispatch-contact.png",
-    alt: "Illustrative dispatch worker beside a cargo truck",
+    alt: "Trabajador ilustrativo junto a un camión de carga",
     href: "/es/expertise/logistics/",
-    action: "Explore logistics",
+    action: "Explore la logística",
     icon: GlobeHemisphereWestIcon,
   },
   {
     id: "transport",
     number: "04",
-    title: "Transport",
+    title: "Transporte",
     description:
-      "Component reference, quantity, destination, and timing all shape a useful transport discussion. Share those details with our team as you plan your supply request.",
+      "La referencia, la cantidad, el destino y los plazos son esenciales para hablar de transporte. Comparta esos datos con nuestro equipo al preparar su solicitud.",
     image: "/images/transport-hero.webp",
-    alt: "Illustrative truck loading scene at an industrial yard",
+    alt: "Escena ilustrativa de carga de un camión en un recinto industrial",
     href: "/es/expertise/transport/",
-    action: "Explore transport",
+    action: "Explore el transporte",
     icon: TruckIcon,
   },
 ] as const;
@@ -83,32 +83,32 @@ export default function ExpertisePage() {
       <section className="reference-product-hero expertise-hero" data-enter aria-labelledby="expertise-title">
         <HeroVideo source="/videos/plastex-hero.mp4" poster="/images/hero-aerial.webp" className="reference-product-film" />
         <div className="container reference-product-hero-inner">
-          <h1 id="expertise-title">Our<br />expertise.</h1>
-          <p className="reference-product-tagline">Friction products and component conversations from Tangier.</p>
+          <h1 id="expertise-title">Nuestra<br />experiencia.</h1>
+          <p className="reference-product-tagline">Productos de fricción y diálogo técnico desde Tánger.</p>
           <div className="reference-hero-contact">
-            <span>Have a project in mind?</span>
-            <a href="mailto:commercial@plastexmaroc.com" aria-label="Email Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
-            <a href="tel:+212539351136" aria-label="Call Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
+            <span>¿Tiene un proyecto en mente?</span>
+            <a href="mailto:commercial@plastexmaroc.com" aria-label="Enviar correo a Plastex Maroc"><EnvelopeSimpleIcon size={20} aria-hidden="true" /></a>
+            <a href="tel:+212539351136" aria-label="Llamar a Plastex Maroc"><PhoneIcon size={20} aria-hidden="true" /></a>
           </div>
         </div>
-        <span className="reference-film-note">Illustrative footage</span>
+        <span className="reference-film-note">Vídeo ilustrativo</span>
       </section>
 
       <section className="expertise-intro" aria-labelledby="expertise-intro-title">
         <div className="container expertise-intro-grid">
           <div className="expertise-intro-statement">
-            <ScrollFillHeadline id="expertise-intro-title" text="From the first part reference to a clearer supply conversation, every detail matters." />
+            <ScrollFillHeadline id="expertise-intro-title" text="Desde la primera referencia hasta un diálogo claro sobre suministro, cada detalle importa." />
           </div>
           <div className="expertise-intro-links">
-            <p>Explore our components</p>
-            <nav aria-label="Explore products">
+            <p>Explore nuestros componentes</p>
+            <nav aria-label="Explorar productos">
               {productLinks.map((link) => <Link href={link.href} key={link.href}>{link.label}</Link>)}
             </nav>
           </div>
         </div>
       </section>
 
-      <section className="expertise-services" aria-label="Plastex Maroc capabilities">
+      <section className="expertise-services" aria-label="Capacidades de Plastex Maroc">
         <div className="container expertise-service-list">
           {capabilities.map((capability, index) => {
             const Icon = capability.icon;

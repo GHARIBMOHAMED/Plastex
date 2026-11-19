@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: product.seo },
     description: product.description,
-    alternates: { canonical: `/${slug}/`, languages: { fr: `/${slug}/`, en: `/en/${slug}/` } },
+    alternates: { canonical: `/${slug}/`, languages: { fr: `/${slug}/`, en: `/en/${slug}/`, es: `/es/${slug}/` } },
     openGraph: { locale: "fr_MA", title: product.seo, description: product.description },
   };
 }
