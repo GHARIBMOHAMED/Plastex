@@ -7,6 +7,7 @@ import {
   PhoneIcon,
 } from "@phosphor-icons/react/ssr";
 import ProductionSteps from "./production-steps";
+import ScrollFillHeadline from "../../scroll-fill-headline";
 
 export const metadata: Metadata = {
   title: "Production en interne",
@@ -69,7 +70,7 @@ export default function ProductionPage() {
             <h2 id="production-quality-title">Renseignez-vous sur nos certifications.</h2>
             <div className="production-certifications"><span>TÜV</span><span>AFNOR</span></div>
           </div>
-          <p>Les questions de qualité font partie de tout échange sur l’approvisionnement. Notre équipe peut vous fournir les détails des certifications TÜV et AFNOR, notamment leur portée et les documents applicables, sur demande.</p>
+          <ScrollFillHeadline id="production-quality-statement" text="Les questions de qualité font partie de tout échange sur l’approvisionnement. Notre équipe peut vous fournir les détails des certifications TÜV et AFNOR, notamment leur portée et les documents applicables, sur demande." />
         </div>
       </section>
 

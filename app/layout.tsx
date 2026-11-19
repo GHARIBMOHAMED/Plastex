@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Header } from "./components";
 import { Footer as EnglishFooter, Header as EnglishHeader } from "./en/components";
+import { Footer as SpanishFooter, Header as SpanishHeader } from "./es/components";
 import { siteUrl } from "./data";
 import BrandMark from "./brand-mark";
 import { headers } from "next/headers";
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const locale = (await headers()).get("x-site-locale") === "en" ? "en" : "fr";
+  const requestedLocale = (await headers()).get("x-site-locale");
+  const locale = requestedLocale === "en" || requestedLocale === "es" ? requestedLocale : "fr";
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -46,11 +48,11 @@ export default async function RootLayout({
         <div className="site-loader" aria-hidden="true">
           <div className="loader-center">
             <BrandMark className="loader-brand-mark" />
-            <span className="loader-caption">{locale === "en" ? "PRECISION IN MOTION" : "LA PRÉCISION EN MOUVEMENT"}</span>
+            <span className="loader-caption">{locale === "en" ? "PRECISION IN MOTION" : locale === "es" ? "PRECISIÓN EN MOVIMIENTO" : "LA PRÉCISION EN MOUVEMENT"}</span>
           </div>
         </div>
         <a className="skip-link" href="#main-content">
-          {locale === "en" ? "Skip to content" : "Aller au contenu"}
+          {locale === "en" ? "Skip to content" : locale === "es" ? "Ir al contenido" : "Aller au contenu"}
         </a>
         <script
           type="application/ld+json"
@@ -58,9 +60,9 @@ export default async function RootLayout({
             __html: JSON.stringify(organization).replace(/</g, "\\u003c"),
           }}
         />
-        {locale === "en" ? <EnglishHeader /> : <Header />}
+        {locale === "en" ? <EnglishHeader /> : locale === "es" ? <SpanishHeader /> : <Header />}
         <main id="main-content">{children}</main>
-        {locale === "en" ? <EnglishFooter /> : <Footer />}
+        {locale === "en" ? <EnglishFooter /> : locale === "es" ? <SpanishFooter /> : <Footer />}
       </body>
     </html>
   );

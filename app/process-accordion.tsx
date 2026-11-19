@@ -29,14 +29,23 @@ const topics = [
 ] as const;
 
 export default function ProcessAccordion() {
-  const [active, setActive] = useState(0);
-  const ActiveIcon = topics[active].icon;
+  const [active, setActive] = useState<number | null>(0);
+  const [visualIndex, setVisualIndex] = useState(0);
+  const ActiveIcon = topics[visualIndex].icon;
+  const toggle = (index: number) => {
+    if (active === index) {
+      setActive(null);
+    } else {
+      setActive(index);
+      setVisualIndex(index);
+    }
+  };
 
   return (
     <section className="process-section" aria-label="Comment travaille Plastex Maroc">
       <div className="container process-layout">
         <div className="process-visual" aria-hidden="true">
-          <div className="process-icon" key={active}>
+          <div className="process-icon" key={visualIndex}>
             <ActiveIcon size={130} weight="thin" />
           </div>
         </div>
@@ -47,7 +56,7 @@ export default function ProcessAccordion() {
               return (
                 <div className={`process-item ${open ? "is-open" : ""}`} key={topic.title}>
                   <h2>
-                    <button type="button" id={`process-trigger-${index}`} aria-expanded={open} aria-controls={`process-panel-${index}`} onClick={() => setActive(index)}>
+                    <button type="button" id={`process-trigger-${index}`} aria-expanded={open} aria-controls={`process-panel-${index}`} onClick={() => toggle(index)}>
                       <span className="process-toggle" aria-hidden="true">{open ? <XIcon size={25} /> : <PlusIcon size={25} />}</span>
                       <span>{topic.title}</span>
                     </button>

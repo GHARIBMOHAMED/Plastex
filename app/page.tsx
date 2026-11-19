@@ -10,6 +10,7 @@ import RangeSelector from "./range-selector";
 import HeroVideo from "./hero-video";
 import ProcessAccordion from "./process-accordion";
 import SolarEnergy from "./solar-energy";
+import ScrollFillHeadline from "./scroll-fill-headline";
 
 export const metadata: Metadata = {
   title: "Composants de freinage et d’embrayage de Tanger",
@@ -41,9 +42,7 @@ export default function Home() {
       <section className="intro-section container">
         <div className="intro-grid">
           <div className="intro-statement">
-            <h2>
-              Nous fabriquons des composants de freinage et d’embrayage. Nous proposons aussi des tambours et des plaquettes de frein aux acheteurs professionnels.
-            </h2>
+            <ScrollFillHeadline id="home-intro-title" text="Nous fabriquons des composants de freinage et d’embrayage. Nous proposons aussi des tambours et des plaquettes de frein aux acheteurs professionnels." />
             <Link className="button-dark" href="#products">
               Voir nos produits <Arrow diagonal />
             </Link>

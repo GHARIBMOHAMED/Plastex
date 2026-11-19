@@ -10,6 +10,7 @@ import RangeSelector from "./range-selector";
 import HeroVideo from "./hero-video";
 import ProcessAccordion from "./process-accordion";
 import SolarEnergy from "./solar-energy";
+import ScrollFillHeadline from "./scroll-fill-headline";
 
 export const metadata: Metadata = {
   title: "Brake & Clutch Components from Tangier",
@@ -41,10 +42,7 @@ export default function Home() {
       <section className="intro-section container">
         <div className="intro-grid">
           <div className="intro-statement">
-            <h2>
-              We make brake and clutch components. We also offer brake drums
-              and brake pads for professional buyers.
-            </h2>
+            <ScrollFillHeadline id="home-intro-title" text="We make brake and clutch components. We also offer brake drums and brake pads for professional buyers." />
             <Link className="button-dark" href="#products">
               View our products <Arrow diagonal />
             </Link>

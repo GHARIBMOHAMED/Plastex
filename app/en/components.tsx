@@ -4,10 +4,11 @@ import {
   ArrowRightIcon,
   ArrowUpRightIcon,
   FilmSlateIcon,
+  PlusIcon,
 } from "@phosphor-icons/react/ssr";
 import { productLinks } from "./data";
 import BrandMark from "./brand-mark";
-import MenuDismiss from "./menu-dismiss";
+import MenuDismiss from "../menu-dismiss";
 import LanguageSwitcher from "../language-switcher";
 
 export function Arrow({ diagonal = false }: { diagonal?: boolean }) {
@@ -118,8 +119,7 @@ export function Header() {
       </details>
       <details className="mobile-menu">
         <summary aria-label="Menu">
-          <span></span>
-          <span></span>
+          Menu <PlusIcon className="mobile-menu-plus" size={22} weight="light" aria-hidden="true" />
         </summary>
         <nav aria-label="Mobile navigation"><MenuPanel /></nav>
       </details>

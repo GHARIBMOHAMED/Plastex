@@ -4,6 +4,7 @@ import {
   ArrowRightIcon,
   ArrowUpRightIcon,
   FilmSlateIcon,
+  PlusIcon,
 } from "@phosphor-icons/react/ssr";
 import { productLinks } from "./data";
 import BrandMark from "./brand-mark";
@@ -118,8 +119,7 @@ export function Header() {
       </details>
       <details className="mobile-menu">
         <summary aria-label="Menu">
-          <span></span>
-          <span></span>
+          Menu <PlusIcon className="mobile-menu-plus" size={22} weight="light" aria-hidden="true" />
         </summary>
         <nav aria-label="Navigation mobile"><MenuPanel /></nav>
       </details>

@@ -68,7 +68,7 @@ export default function CategoryShowcase() {
         <div className={`category-grid${active === null ? "" : ` category-active-${active}`}`}>
           {productLinks.map((item, index) => (
             <Link href={item.href} className={`category-card ${index === active ? "category-card-featured" : ""}`} key={item.href} onMouseEnter={() => setHovered(index)} onMouseLeave={() => setHovered(null)} onFocus={() => setSelected(index)} onClick={() => setSelected(index)}>
-              {index < scenes.length ? <CardMedia poster={scenes[index]} film={films[index]} label={item.label} /> : <span className="category-pad-design" aria-hidden="true"><span>04 / BRAKING COMPONENTS</span></span>}
+              {index < scenes.length ? <CardMedia poster={scenes[index]} film={films[index]} label={item.label} /> : <span className="category-pad-design" aria-hidden="true"><span>04 / BRAKING COMPONENTS</span><strong>Friction at the heart of motion.</strong></span>}
               <span className="category-label">
                 <span><strong>{item.label}</strong><small>{details[index]}</small></span>
                 <span className="category-arrow" aria-hidden="true"><ArrowUpIcon size={24} /></span>
